@@ -1,29 +1,31 @@
-# Language capabilities — verified scope, 23 October 2026
+# Language support
 
-Final polish results: unchanged 71-language registry; final Android regression 60/60 and normal offline model smoke 2/2 passed. The actual model suite retained three quality failures, including the original Japanese/Korean cases. A real DE→TR walkthrough also introduced female gender for neutral “person” and changed ongoing duration to past tense. Do not generalize a short passing German sample to every German translation. Original review and original-text assessment remain intact. Final budget is 22/100, USD 0.0749696 conservative. See current local handoff (excluded from this source backup) and local machine-readable results (excluded from this source backup).
+The source registry contains 71 processing languages. Interface localization is
+separate and supports English, Turkish, French, and Arabic. The table below
+retains earlier diagnostic observations; no language tests were rerun during
+the publication review.
 
-Current policy update: the owner has authorized **100 total API attempts**, preserving all earlier attempts and unchanged USD 3/5 safeguards. Counts such as21/23 below are dated prior-run evidence, not the current maximum. See HANDOFF.md for the final ledger and latest run. The registry/model mappings and failed JA/KO quality expectations are unchanged in the polish pass.
+## Independent choices
 
-The former four-element core Language enum controlled the catalog, utterance acceptance, Whisper allow-list, tokenizer mapping and OpenAI schema together. UiCopy also used enum ordinals. Those application restrictions have been replaced by one explicit processing registry, separate from the four available interface localizations. No new model or model-quality claim follows from adding a code.
+- Interface language controls menus.
+- Input/speech language describes the original message.
+- Translation target controls optional display translation.
+- Assessment language controls the requested result language.
 
-## Independent roles
+Unknown codes are rejected. Explicit speech aliases are mapped without arbitrary
+region/script trimming. Simplified Chinese uses zho_Hans; Javanese jv maps to
+Whisper jw. Catalog provenance is recorded in [THIRD_PARTY.md](THIRD_PARTY.md).
 
-- Interface: EN/TR/FR/AR only, with explicit safe table indexing.
-- Input: selected source/speech language, recorded per message. Only that original message is submitted for assessment after review and explicit consent.
-- Translation target: independently persisted; used by WalkieTalkie and Conversation. Same-language messages bypass inference.
-- Assessment result: independently persisted; strict schema requires the exact requested registered code. Migration retains the prior combined choice without deleting preferences.
+Whisper has mappings for 58 registry codes; other entries can still accept typed
+input. The normal catalog filters some entries, and expanded-language settings
+expose additional unverified choices. TTS depends on actual installed offline
+voices and quality settings. ML Kit has its own supported-language intersection.
 
-Unknown codes are rejected. Only explicit speech locale aliases are mapped; arbitrary region/script subtags are never trimmed. Legacy simplified Chinese maps to zho_Hans; Hant voices/unknown variants are not silently accepted. Javanese jv maps explicitly to Whisper jw.
+## Capability matrix
 
-## Provenance and scope
-
-Read-only RTranslator-2.00 raw/nllb_supported_languages_all.xml and translation/Tokenizer.java provide the 71 enabled entries and FLORES token order (256001 + index). Commented-out Indonesian is not treated as supported. Pinned whisper.cpp g_lang has 58 of these codes. The normal original 31-language filter is retained; the expanded catalog also permits typed-only languages without pretending Whisper supports them. Apache-2.0 source notices remain; NLLB weights remain separately CC-BY-NC-4.0.
-
-TTS is conditional on the actual device voice, offline readiness and original quality preference. Lack of a voice does not disable typed input, translation or assessment. ML Kit support is its runtime catalog intersected with this registry; unsupported pairs direct the user to NLLB. Model download/preparation is explicit.
-
-## Capability matrix (not runtime or quality proof)
-
-Every row has a valid NLLB tokenizer mapping and strict OpenAI language-field plumbing. This does not establish provider quality, installed models or clinical accuracy. Actual translation/speech/TTS results are recorded separately below; mapping is not quality proof.
+A tokenizer mapping and response schema entry do not prove recognition,
+translation, TTS availability, clinical accuracy, or provider performance.
+Rows marked passed refer only to historical bounded fixtures, not broad validation.
 
 | Canonical tag | NLLB / token | Whisper code | Runtime/quality |
 |---|---|---|---|
@@ -99,20 +101,19 @@ Every row has a valid NLLB tokenizer mapping and strict OpenAI language-field pl
 | fa | pes_Arab / 256053 | fa | Mapping tested; actual language quality unverified |
 | km | khm_Khmr / 256092 | km | Mapping tested; actual language quality unverified |
 
-The existing local emergency-word checks cover four languages only. A new explicit local_screening value distinguishes warning matches, absence of a local match (never all-clear), and unverified language coverage. The prompt still assesses the reviewed original and requires uncertainty when it cannot understand the text. No unsupported-language LOW default or Demo fallback is introduced.
 
-## Verification status
+## Known limits
 
-- Core: 19/19 passed; backend: 30/30 passed.
-- App unit tests: 108/108 passed99, including original four-language fixtures, all-registry/consent and localized failure tests. Core19/backend30 previously passed and remained cached in the final build.
-- Shell99 device/isolated/runner builds and device lint passed6m34s. Test-only rebuilds100/111 passed.
-- New clean API36 x86_64 isolated guest,12GB data; original application untouched. Initial role migration/persistence/recreation, preparation UI and voice-catalog tests3/3 passed70. Initial Pixel Launcher/SystemUI and instrumentation-startup ANRs retained; not treated as NLLB or application quality success.
-- Real NLLB78: DE/BG/DA/NL/FI/GL/HR/CA each passed one synthetic source→EN negation/duration/severity/throat+fever check and produced nonempty EN→source output. Reverse fluency is not established (e.g. Finnish grammar is imperfect). Paired translations1.5–3.3s; model load7.5s. JA returned 'There's no heat' for the fever sentence, failing symptom meaning. KO input triggered unknown-token rejection; diagnosis pending. Original fixtures and thresholds retained. Full test remains FAILED, not9/10 or all-language success.
-- Prepared offline TTS catalog: EN9/TR6/FR6/AR5/DE5/JA5 voices. The other65 registry codes have no installed offline voice on this guest; this does not gate typed translation/assessment. Official Google TTS packages added about73.2MB; no NLLB/Whisper weight download.
-- Shell92:5/5 PASS,141.339s. All three formerly blocked NLLB/Conversation cases now pass: ordered actual peer translations, sequential actual TTS, and TR synthetic waveform→Whisper→NLLB→review→explicit mock approval with original text preserved. New DE original/EN single bubble/TR UI/JA result-selection recreation and voice catalog also pass. Combined pipeline58.506s, sampled peakPSS1,593,221KB, minimum available383,104KB; not a device-wide peak guarantee.
-- Shell94:7/8 PASS,702.335s. Original six native Whisper tests all pass, as does additional DE/JA manual+automatic recognition. The remaining test FAILS its original JA/KO translation quality assertions: JA heat/fever meaning error; KO unknown SentencePiece token U+D515 (픕). These are not silently changed or accepted. Ten actual translations were attempted, eight met the specified meaning checks.
-- DE manual/auto34.488/86.912s; JA38.952/95.309s on this CPU-constrained3GB x86_64 guest. Exact synthetic German sentence preserved; Japanese punctuation/numeral formatting differs, sentinel meaning words retained. Both detected languages match. This is offline TTS-generated PCM through the real model, not physical microphone evidence or broad language accuracy. Cancellation42/37ms, successful restart, sampledPSS980,835KB.
-- Additional JA wording with explicit 発熱 correctly translated fever. Additional KO wording produced 'My neck hurts. There\'s no heat.' and FAILED throat/fever meaning checks. This diagnostic does not replace either original failing fixture. The limitation is model vocabulary/semantic quality, not a four-language UI gate. Translation remains opt-in; original-only assessment and review remain mandatory.
-- Final local scope157: core19/backend30/app108; app108 rerun99, unchanged core/backend cached. Device/isolated builds+lint99 PASS6m34s. Full regression108 had52passes and3 outdated fixture failures; updated whitelist keeps privacy checks and adds independent result preference, catalog selection now scrolls by canonical code. All3 pass in112; no application code changed to hide failures. Targeted112 completed10/12: the3 repaired fixtures and branding/role/UI/Conversation tests pass; additional KO quality fails. TR combined flow also failed safely under3GB guest pressure (111,224KB available, speechMemory,61original characters retained,0translation). Its earlier92 success remains valid but does not establish low-memory reliability; unchanged test120 then PASS1/1 on4GB. Pipeline92.401s,61original/89translated characters,0lowMemory,sampledPSS1,588,317KB,minavailable984,144KB. Explicit consent/original retention passed. These CPU-constrained timings do not establish performance on physical ARM64.
-- Final normal-device German direct API attempt21 VALIDATED, after attempt20 safely rejected OPENAI_SAFETY_CONFLICT. Backend stopped/reverse empty. Total21/23,14validated/7failed,conservativeUSD0.0742168,2remaining. Host history merged only after first19 exact equality; APK seed21. No extra allowance.
-- Normal device133 real model smoke2/2 PASS. Final138 device/lint/app108 PASS;153 budget-seed rebuild PASS. Normal data/models retained. Only old .uitest duplicate Medium file removed after host/device SHA256 equality to free install space. Personal delivery APK updated; historical artifact metadata remains in older HANDOFF sections.
+Japanese fever/heat errors and Korean vocabulary/throat/fever failures remain
+unresolved. A German-to-Turkish example introduced gender and changed ongoing
+symptoms to past tense. Turkish severity loss and other provider-specific failures
+are recorded in [Local translation](LOCAL_TRANSLATION.md).
+
+Local emergency-word checks cover only four languages; other entries explicitly
+have unverified local-screening coverage. The absence of a warning match is not evidence of
+safety. Assessment requires the reviewed original and separate approval; mapping
+a new language never licenses a LOW default or simulated fallback.
+
+Earlier workflow checks included short synthetic/licensed examples and emulator
+tests. Private reports and usage histories are excluded. Language availability is
+not a claim that all 71 languages were tested.

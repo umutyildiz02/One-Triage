@@ -1,31 +1,54 @@
-# Architecture and reference decisions
+# One Triage architecture
 
-## Reference review
-Vital_Voice's WalkieTalkieFragment.extractUrgency parsed English text and defaulted to a black-on-black display on unknown values. The new core uses strict typed JSON and UNDETERMINED with a visible neutral color.
-Vital_Voice's language selection and urgency-color presentation informed the UX; source was not copied.
-Eren's MainActivity had empty navigation callbacks and its Whisper JNI enabled detect_language-only mode. Those implementations were not carried over.
-The old OpenAI client logged prompts/responses and relied on client-side keys. No old key or client code was reused.
+## Modules and state
 
-## Data flow
-App UiState -> review + explicit confirmation -> local Demo fixture OR BackendRepository -> loopback backend -> OpenAI Responses structured output -> shared validation and safety checks -> Evaluation -> result UI.
-Core is shared by Android and backend, with no Android dependencies.
-App uses ViewModel/StateFlow and lifecycle-aware collection. Patient text is memory-only.
-Navigation cancels outstanding assessment jobs; a canceled job cannot publish a late result.
-SpeechRecognizer is activity-owned, main-thread controlled and destroyed on stop/destroy; permission is requested on user action.
+`app` contains Android activities, XML/Compose presentation, model preparation,
+speech, translation, Bluetooth, and assessment repositories. `core` contains
+shared language definitions, response validation, safety rules, and budget logic
+without Android dependencies. `backend` is an optional development service.
 
-## Demo semantics
-Scenario selection is an explicit synthetic fixture, not a prediction based on text.
-The same demo generator runs on-device and behind the HTTP backend.
-Insufficient text and emergency/LOW contradictions are suppressed. Errors do not fall back to a fabricated demo assessment in backend mode.
+The UI uses ViewModel/StateFlow and lifecycle-aware state. Transcripts and results
+are not intended as persistent patient records. Preferences, model files,
+profile information, and usage accounting have separate persistence paths.
 
-## Threat boundary
-The development backend binds 127.0.0.1 only. Live mode requires a distinct access token; the OpenAI key stays in its process environment.
-Only debug permits loopback cleartext. Release requires HTTPS and blocks screenshots.
-No public deployment or claims of production/clinical readiness are made.
-A real deployment requires identity, authorization, TLS, audit design without patient-data leakage, stronger abuse controls and clinical oversight.
+## Processing flow
 
-## Known research limitations
-Emergency phrase matching is a limited, unvalidated tripwire, not comprehensive NLP. Negation may over-trigger and paraphrases may be missed.
-An explicit immediate-danger checkbox and persistent general warning do not depend on keyword coverage.
-A validated clinical protocol, clinical dataset evaluation, translation evaluation and professional review remain necessary.
-Speech support depends on installed recognition services and language models. Provider/offline behavior varies.
+Typed text or speech recognition -> editable original -> optional display
+translation -> review and explicit assessment approval -> configured repository
+-> strict response validation -> result or explicit error.
+
+The `device` variant uses a direct HTTPS OpenAI repository. Development variants
+can use isolated synthetic demo fixtures or the optional backend. A release build
+needs its own configured HTTPS endpoint. See [Build and credentials](BUILDING.md).
+
+Only reviewed original text is submitted. Translation, TTS, Bluetooth sharing,
+and assessment are separate actions. Changes invalidate stale approval/results.
+Cancellation and revision checks suppress late callbacks. Live errors do not
+fall back to a demo assessment.
+
+## Local work and network boundaries
+
+Whisper and prepared NLLB/ML Kit translation perform local inference. Model
+preparation is explicit and contacts external hosts. Android system recognition
+has provider-dependent behavior. TTS depends on installed offline voices.
+
+Bluetooth uses a bonded, accepted, single-peer foreground session. Sharing needs
+approval for the exact text/language/recipient. Receiving does not trigger assessment.
+See [Bluetooth integration](BLUETOOTH_INTEGRATION.md).
+
+The development backend binds loopback and live mode requires a separate access
+token. Provider credentials belong in private configuration, never source.
+The private direct-device build embeds a key and is unsuitable for public APK
+distribution. Endpoint and signing configuration remain unchanged by this PR.
+
+## Safety and verification boundaries
+
+Strict JSON fields and category/language/score/color validation protect the
+response contract. The experimental score is not calibrated clinical probability.
+Limited emergency-word matching is not comprehensive language understanding;
+lack of a match never establishes safety. Unknown or invalid results do not
+become LOW.
+
+No production deployment, clinical validation, or current device test is claimed.
+The publication review is documented in [PUBLICATION.md](PUBLICATION.md).
+Derived-component provenance is recorded separately in [THIRD_PARTY.md](THIRD_PARTY.md).

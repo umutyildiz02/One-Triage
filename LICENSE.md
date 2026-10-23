@@ -1,28 +1,46 @@
-# License scope
+# One Triage — license scope
 
-This private repository is an authorized source backup.
-No new blanket license is granted for the owner's original code, branding, or artwork.
-The One Triage / OneVoice identity is supplied by the owner for this project;
-this backup does not grant third parties trademark or artwork rights.
+This repository contains original project material and separately licensed
+third-party components. It does **not** grant a new blanket license for all of
+One Triage's original code, documentation, branding, or artwork. Repository access
+and publication preparation are not permission for unrestricted redistribution.
 
-Third-party components retain their own licenses and copyright notices.
-See [NOTICE.md](NOTICE.md), [the bundled notices](app/src/commonAssets/THIRD_PARTY_NOTICES.txt),
-and [license texts](release-delivery/licenses/).
+The One Triage / OneVoice identity is owner-supplied. No trademark or artwork
+rights are granted by this document. Existing third-party permissions continue
+to apply to their respective materials; this statement does not revoke or narrow
+those permissions.
 
-- RTranslator-derived layouts, settings, and adaptations: Apache-2.0.
-- Whisper.cpp / ggml and OpenAI Whisper: MIT.
-- SentencePiece: Apache-2.0, with its bundled dependency notices.
-- ONNX Runtime: MIT.
-- Nunito Sans fonts: SIL Open Font License.
-- The Google translation attribution graphic is retained solely as provider attribution,
-  not licensed as One Triage branding.
-- Optional NLLB model weights: CC-BY-NC-4.0, separate from application code.
+## Component licenses
 
-No NLLB or Whisper weights are included. NLLB's model card describes research intent,
-excludes production deployment and domain-specific medical use from its intended scope,
-and does not certify translations. See the
-[upstream model card](https://huggingface.co/facebook/nllb-200-distilled-600M).
+| Material | Applicable terms |
+|---|---|
+| Adapted application components identified in NOTICE.md | Apache-2.0 |
+| Whisper.cpp / ggml and optional OpenAI Whisper weights | MIT |
+| SentencePiece | Apache-2.0 and bundled dependency notices |
+| ONNX Runtime | MIT |
+| Nunito Sans fonts | SIL Open Font License 1.1 |
+| Optional NLLB weights | CC BY-NC 4.0; separate from application code |
+| Google ML Kit and its translation attribution | Provider terms and attribution requirements |
 
-Private backup is not clinical approval or permission for commercial deployment.
-Before broader distribution, separately confirm rights to owner-supplied graphics
-and all applicable model and dependency terms.
+See [NOTICE.md](NOTICE.md), [the component inventory](docs/THIRD_PARTY.md),
+[full license texts](release-delivery/licenses/), and
+[the packaged notices](app/src/commonAssets/THIRD_PARTY_NOTICES.txt).
+Existing copyright, license, attribution, and modification notices must remain
+with the material to which they apply. Upstream license text is authoritative.
+
+## Models and distribution limits
+
+No Whisper or NLLB weights are committed. Downloading them does not make their
+terms part of the application's code license. The
+[NLLB model card](https://huggingface.co/facebook/nllb-200-distilled-600M) describes
+research intent, says the model is not released for production deployment, and
+places medical-domain translation outside its intended scope. Its
+[CC BY-NC 4.0 license](https://creativecommons.org/licenses/by-nc/4.0/) additionally
+limits use to noncommercial purposes under its conditions. Intended-use guidance
+and copyright license terms are distinct; neither establishes clinical safety.
+
+Before broader distribution, the maintainer must choose an explicit license for
+original contributions, establish rights to owner-supplied and adapted assets,
+review unresolved provenance and resolved dependency terms, and decide whether
+to replace models unsuitable for the intended use. This private documentation
+review does not resolve those decisions or certify medical/regulatory compliance.
