@@ -59,7 +59,7 @@ Four independent choices control different parts of the experience:
 
 | Choice | Purpose |
 |---|---|
-| Interface | Menus and messages: English, Turkish, French, or Arabic |
+| Interface | Menus and messages: English, Turkish, French ... |
 | Input / speech | The language of the original message |
 | Translation target | The language displayed for an optional translation |
 | Assessment result | The requested language of the AI response |
@@ -80,7 +80,7 @@ The speaker control uses an installed voice. Optional reading of translated turn
 
 Translation is optional and off by default. Choose an engine and target language, prepare the necessary models, then enable translation. Equal source and target languages skip translation. Missing or unsupported output produces a visible status while the original remains available.
 
-Inspect translations carefully, particularly negation, symptom severity, duration, and who is being described. Recorded limitations include Japanese fever/heat confusion, Korean vocabulary and meaning failures, Turkish severity loss, and German-to-Turkish gender and tense changes. Passing a short example does not establish medical accuracy.
+Inspect translations carefully, particularly negation, symptom severity, duration, and who is being described. Passing a short example does not establish medical accuracy.
 
 NLLB is a research model with separate noncommercial licensing and medical-domain suitability limitations. ML Kit has its own terms and attribution requirements. Neither option is presented as clinically validated. [Translation details](docs/LOCAL_TRANSLATION.md) explain these boundaries.
 
