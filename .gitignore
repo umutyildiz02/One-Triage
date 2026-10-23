@@ -1,3 +1,6 @@
+# Unreviewed deployment templates: excluded by IDE access policy during publication
+deploy/
+
 # Local credentials, usage histories, and private publication tools
 .runtime/
 .scratch/

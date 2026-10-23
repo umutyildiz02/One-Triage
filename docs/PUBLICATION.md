@@ -17,6 +17,9 @@ Private configuration, API keys, access tokens, signing material, usage/download
 models, personal APK/AAB files, generated assets, build/IDE caches, private recordings,
 screenshots, device logs, local delivery reports, and credential-inspection tooling.
 Local launch shortcuts are omitted; documented Gradle commands are portable.
+The optional deploy/ directory was blocked by the IDE's AI access policy and could not
+be reviewed. It is intentionally excluded rather than published without inspection.
+Android, core, backend source, and Gradle builds do not depend on that directory.
 Model and audio-fixture preparation remains explicit and external to Git.
 
 Selected technical notes retain historical results and known failures for context.
