@@ -56,5 +56,5 @@ Models and speech fixture downloads are not part of the Git repository.
 Some instrumentation tests require separately prepared models and permitted speech fixtures.
 They are not expected to pass on an empty device without preparation.
 
-This publication pass checked source structure, Git integrity, secrets, and submodule pins.
-It did not rebuild Android binaries or rerun model inference, as requested.
+See [Publication review](PUBLICATION.md) for the scope and limits of source checks.
+This documentation pass does not rebuild Android binaries or rerun model inference.

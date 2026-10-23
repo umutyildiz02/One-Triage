@@ -29,5 +29,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-VitalTriage adapts the owner's Eren_Project PCM-to-Whisper JNI flow.
+One Triage uses an adapted PCM-to-Whisper JNI flow; see NOTICE.md for provenance.
 Audio is processed locally. Model existence is not a clinical validation.

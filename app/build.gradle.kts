@@ -123,7 +123,7 @@ val preparePersonalDeviceAssets = tasks.register("preparePersonalDeviceAssets") 
     outputs.upToDateWhen { false } // Re-read the preserved budget and exact current prompt for each build.
     doLast {
         val settingsFile = rootProject.file(".runtime/device-secrets.properties")
-        require(settingsFile.isFile) { "Personal device secrets configuration missing; see docs/HANDOFF.md." }
+        require(settingsFile.isFile) { "Personal device secrets configuration missing; see docs/BUILDING.md." }
         val properties = Properties().apply { settingsFile.inputStream().use { load(it) } }
         val reference = properties.getProperty("referenceFile").orEmpty()
         val explicit = properties.getProperty("openaiApiKey").orEmpty()

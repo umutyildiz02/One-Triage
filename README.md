@@ -1,82 +1,143 @@
 # One Triage
 
-One Triage is a personal Android app for speaking, translating, and reviewing symptoms.
-The interface uses the OneVoice logo and a mint/green design.
+One Triage is an experimental Android application for describing symptoms, reviewing speech transcripts, translating conversations, and requesting an optional AI assessment. Its workflow keeps the original message available for review and separates translation, Bluetooth sharing, and assessment approval.
 
-## What it does
+One Triage uses OneVoice visual assets. This private source repository excludes credentials, private APKs, and model weights; it does not provide clinical certification.
 
-- Accepts typed messages and speech.
-- Uses prepared Whisper models for offline speech recognition.
-- Uses prepared NLLB models for offline translation.
-- Shows one translated bubble for each turn.
-- Reads messages with an installed Android text-to-speech voice.
-- Supports Bluetooth Conversation with explicit message sharing.
-- Sends the reviewed original text to OpenAI only after approval.
-- Shows a compact, colored urgency result. Errors are not replaced with simulated results.
+> **Safety:** One Triage is not a medical device, diagnosis service, or emergency service. Speech recognition, translation, and AI assessments can be wrong. Do not delay emergency assistance while waiting for the app.
 
-AI and translation can be wrong. Do not wait for this app in an emergency.
-This software is not clinically validated.
+## Features
 
-## Open and build
+- Type a message or capture speech, then review and edit the original text.
+- Run offline speech recognition with prepared Whisper Small or Medium models.
+- Choose optional local translation using NLLB or Google ML Kit.
+- Keep interface, input, translation target, and assessment languages separate.
+- Display a translated turn while retaining its original for review.
+- Read text with an available installed Android text-to-speech voice.
+- Exchange explicitly approved text with one nearby Bluetooth Conversation peer.
+- Request an OpenAI assessment only after reviewing and approving the original.
+- Show compact assessment and urgency information, with additional details available.
+- Report missing models, invalid responses, and processing errors without substituting a fabricated live result.
 
-1. Clone this repository with its submodules:
-   `git clone --recurse-submodules <this-repository-url>`
-2. Open the cloned folder in Android Studio.
-3. Use JDK 17. Install Android SDK 36, NDK 29.0.14033849, and CMake 3.22.1.
-4. Let Gradle sync.
-5. For a safe, keyless development build, select the **app** module and **uiTest** build variant.
-6. Build with `gradlew.bat :app:assembleUiTest -PcompactModels=true` on Windows,
-   or `./gradlew :app:assembleUiTest -PcompactModels=true` on macOS/Linux.
+## Requirements and installation
 
-This isolated development package is `com.vitaltriage.app.uitest`.
-It does not include an OpenAI key. Development fixtures are not real assessments.
-It does not replace the owner's installed personal application.
+Android 8.0 / API 26 or newer is required. Native libraries target ARM64 and x86_64. Some capture options need newer Android versions, and available speech services, voices, memory, and Bluetooth support vary by device.
 
-Android 8.0 (API 26) or later is required. The native targets are ARM64 and x86_64.
-Not every phone, microphone, Bluetooth radio, or language has been verified.
+For development, install Android Studio, JDK 17, Android SDK 36, NDK 29.0.14033849, and CMake 3.22.1. Clone the repository using an account with access:
 
-See [Build and credentials](docs/BUILDING.md) for the other variants and private configuration.
+```sh
+git clone --recurse-submodules https://github.com/umutyildiz02/One-Triage.git
+```
 
-## Models and languages
+Open the cloned folder in Android Studio and allow Gradle to sync. If submodules were omitted, run `git submodule update --init --recursive` from that folder. Keep the committed submodule revisions.
 
-Model weights are **not stored in GitHub**.
-Use the app's model preparation screen. Review the size and approve the download.
-Use Wi-Fi and keep enough free space. NLLB needs about 1 GB, plus working space.
-Whisper has separate model choices and storage needs.
+Select the **app** module and **uiTest** build variant for keyless development. On Windows:
 
-The app verifies model files and reuses completed downloads.
-Once ready, local speech recognition and translation can work offline.
-A suitable installed TTS voice is needed for offline reading.
-OpenAI assessments require internet.
+```powershell
+.\gradlew.bat :app:assembleUiTest -PcompactModels=true
+```
 
-Menu, spoken, translation, and assessment languages are separate settings.
-A language mapping is not proof of translation accuracy.
-Japanese and Korean have known translation-quality limitations.
-Always review important wording, including negation, time, and severity.
+On macOS or Linux, use `./gradlew :app:assembleUiTest -PcompactModels=true`. The output is `app/build/outputs/apk/uiTest/app-uiTest.apk`. Install that APK on your own test device, or run the selected variant through Android Studio.
 
-## Credentials and personal builds
+The isolated package is `com.vitaltriage.app.uitest`; its technical identifier is retained for compatibility. Its demo controls use synthetic fixtures, not medical predictions. Other variants can share the original application's package: read [Build and credentials](docs/BUILDING.md) before using them. Do not uninstall an existing personal application or erase its data to resolve installation conflicts. No Android build or device installation was performed for this documentation review.
 
-No OpenAI key, access token, signing key, owner usage ledger, or personal APK is included.
+## First launch and model downloads
 
-The owner's **device** build connects directly from the phone to OpenAI.
-It requires private local configuration that is deliberately absent here.
-The computer does not need to remain on after installing that configured build.
+Read the onboarding notice, choose an interface language, and enter a non-sensitive nickname. An optional profile photo stays on the device. Do not use patient information in the profile.
 
-A key embedded in an APK can be extracted. Such APKs must not be publicly redistributed.
-Never commit private configuration or reset an existing usage ledger.
-The 100-attempt cap and separate USD safeguards remain in the source.
+Open **Settings**, select a Whisper model, and choose its preparation action. Review the download information and approve it explicitly. Small requires about **190 MB**; Medium about **539 MB**. Medium generally needs more processing time and memory. The current unset model preference resolves to Medium; choosing Small is available when resources are limited.
 
-## Source and licensing
+For NLLB, select that translation engine and prepare its models separately. The complete configured set is approximately **1.00 GB**, plus temporary download and working space. ML Kit instead prepares the selected supported language models, approximately **30 MB per language**. Use Wi-Fi and leave storage headroom.
 
-- [Build and credentials](docs/BUILDING.md)
-- [Source publication checks and exclusions](docs/PUBLICATION.md)
-- [Attribution](NOTICE.md)
-- [License scope](LICENSE.md)
-- [Third-party license texts](release-delivery/licenses/)
-- [Privacy and safety](app/src/commonAssets/PRIVACY_AND_SAFETY.txt)
+Whisper and NLLB preparation verify expected file sizes and SHA-256 hashes, reuse valid completed files, and install verified artifacts. A failed integrity check is an error, not permission to bypass verification. Ordinary recognition or translation does not silently prepare missing models. ML Kit manages its own model delivery, which may continue after its preparation screen closes.
 
-RTranslator-derived code keeps its Apache-2.0 notices.
-Whisper/ggml uses MIT terms; SentencePiece uses Apache-2.0.
-NLLB weights have separate CC-BY-NC-4.0 terms and research/medical-domain limitations.
-They are not covered by the code licenses and are not included in this repository.
-See the [NLLB model card](https://huggingface.co/facebook/nllb-200-distilled-600M).
+Once prepared, Whisper and local translation can work offline. Reading aloud also needs a suitable installed offline voice. OpenAI assessments still require internet. See [model provenance and terms](docs/THIRD_PARTY.md) before downloading or redistributing models.
+
+## Selecting languages
+
+Four independent choices control different parts of the experience:
+
+| Choice | Purpose |
+|---|---|
+| Interface | Menus and messages: English, Turkish, French, or Arabic |
+| Input / speech | The language of the original message |
+| Translation target | The language displayed for an optional translation |
+| Assessment result | The requested language of the AI response |
+
+Select relevant input languages in Settings and choose the active speech language on the main screen. Automatic detection is available, but a manual choice can help with short or ambiguous speech.
+
+The processing registry has 71 language entries; this is a mapping, not a promise of speech, voice, or translation quality in all of them. Some languages support typed input without Whisper recognition. The expanded-language and lower-quality-voice options broaden selection; they do not improve model accuracy. See [Language support](docs/LANGUAGE_SUPPORT.md) for the capability matrix.
+
+## Microphone and reading aloud
+
+Prepare the selected model, enable **Offline Whisper**, then tap the microphone and grant recording permission when requested. Speak a short, clear sentence in a quiet environment. Finish the recording using the screen control, or let the enabled silence-based capture finish the utterance. Review names, numbers, timing, and negative statements before proceeding.
+
+When the app owns capture, Settings exposes microphone sensitivity, silence timeout, and audio anticipation. These controls do not apply equally to an external Android speech provider. The alternative system recognizer depends on the device and may send audio to its provider; selecting it does not guarantee offline processing.
+
+The speaker control uses an installed voice. Optional reading of translated turns must be enabled separately. A user-started automatic capture session waits for playback before its next turn. Stop that session when finished; listening does not approve a Bluetooth send or an assessment.
+
+## Translation
+
+Translation is optional and off by default. Choose an engine and target language, prepare the necessary models, then enable translation. Equal source and target languages skip translation. Missing or unsupported output produces a visible status while the original remains available.
+
+Inspect translations carefully, particularly negation, symptom severity, duration, and who is being described. Recorded limitations include Japanese fever/heat confusion, Korean vocabulary and meaning failures, Turkish severity loss, and German-to-Turkish gender and tense changes. Passing a short example does not establish medical accuracy.
+
+NLLB is a research model with separate noncommercial licensing and medical-domain suitability limitations. ML Kit has its own terms and attribution requirements. Neither option is presented as clinically validated. [Translation details](docs/LOCAL_TRANSLATION.md) explain these boundaries.
+
+## Bluetooth Conversation
+
+Open **Conversation** from Settings on both devices. Enable Bluetooth, grant the requested nearby-device permissions, discover the peer, and complete Android pairing and the app's connection acceptance. Compare pairing information when Android presents it.
+
+Review the selected text and recipient before explicitly sharing. The connection exchanges the chosen nickname; profile photos are not shared. Messages contain text and language information, not a continuous raw-audio stream. The receiving side can optionally translate and read a message.
+
+Conversation supports one foreground peer, requires an explicit reconnect, and does not automatically replay missed messages. Receiving or reading a message never submits it to OpenAI. Bluetooth sharing permission and assessment consent are separate. A recipient can retain received text outside this app, so obtain permission before sharing sensitive information.
+
+## OpenAI assessment and settings
+
+Review the **original** symptoms, choose the result language, and explicitly approve the assessment. Display translation is not silently substituted for the original. Editing the input invalidates stale approval or results. Invalid, uncertain, refused, or failed responses are not converted into low urgency or a simulated answer.
+
+The keyless development variant supports demo fixtures and an optional configured backend. A private personal device variant connects directly to OpenAI over HTTPS and needs excluded local credentials and an existing usage ledger. A configured backend instead holds its provider key on the server. The computer need not stay running for the direct device variant.
+
+The preserved personal safeguards include a 100-attempt cap and separate spending controls. Failed or uncertain requests can consume an allowance. Do not reset usage records to bypass a stop. These safeguards are local controls, not account-wide billing protection.
+
+Settings also covers profile information, language catalogs, speech models, translation preparation, voice selection, privacy, and third-party notices. Leave developer/demo settings for development.
+
+## Troubleshooting
+
+| Problem | What to check |
+|---|---|
+| Model unavailable | Select the intended engine/model and explicitly complete preparation. |
+| Download fails | Check Wi-Fi and free storage; retry explicitly without bypassing hashes. |
+| Slow processing or memory error | Use shorter input, consider Small, and use typed input when needed. |
+| No microphone input | Check Android permission, the active language, capture mode, and microphone availability. |
+| No spoken output | Install an offline voice for the selected language in Android speech settings. |
+| Peer missing | Keep both apps foreground; check Bluetooth, permissions, pairing, and acceptance. |
+| Assessment unavailable | Check the selected build's configuration, internet, authentication, and remaining allowance. |
+| Wrong translation | Retain and review the original; disable translation rather than trusting incorrect wording. |
+
+Do not clear app data as routine troubleshooting: it can remove settings, models, and usage records.
+
+## Privacy, safety, and licensing
+
+Local capture does not intentionally save recordings; conversation text and results are not a patient-record system. Settings, profile information, models, and usage records persist. Model downloads contact their hosts. System speech and ML Kit have provider-specific data handling. An approved assessment leaves the device; requesting `store=false` does not promise zero provider retention.
+
+A personal APK containing an API key is extractable and must stay private. Never commit credentials, signing files, patient data, recordings, or private APKs. See [Privacy and safety](app/src/commonAssets/PRIVACY_AND_SAFETY.txt).
+
+The urgency categories and experimental score are not a validated clinical protocol. Source availability does not establish regulatory approval. [LICENSE.md](LICENSE.md) describes the mixed license scope; [NOTICE.md](NOTICE.md) preserves attribution. No blanket open-source license is granted for all original code or branding.
+
+## Project structure and contributions
+
+| Directory | Contents |
+|---|---|
+| `app/` | Android UI, capture, translation, Bluetooth, native bridges, tests |
+| `core/` | Shared language, assessment, validation, and budget logic |
+| `backend/` | Optional development assessment service and tests |
+| `third_party/` | Pinned Whisper.cpp and SentencePiece submodules |
+| `docs/` | Build, architecture, feature, provenance, and review documentation |
+| `release-delivery/licenses/` | Redistributable license texts |
+| `scripts/` | Explicit development and verification utilities |
+| `config/` | Nonfunctional configuration example |
+
+Contributors with repository access should open a focused issue or pull request against `main`, describe the behavior and validation, and preserve consent, original-text handling, and license notices. Use synthetic or properly licensed examples; redact diagnostics. Discuss rights to new assets and contributions with the maintainer before broader redistribution.
+
+Read [Architecture](docs/ARCHITECTURE.md) and [Publication review](docs/PUBLICATION.md). Documentation readiness is separate from public release, clinical validation, and model licensing clearance.
