@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RTranslator source drawable; Apache-2.0. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"><solid android:color="@color/vv_accent_white"/><corners android:radius="5dp"/></shape>

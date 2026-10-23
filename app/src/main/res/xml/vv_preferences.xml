@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    * Copyright 2016 Luca Martino.
+    *
+    * Licensed under the Apache License, Version 2.0 (the "License");
+    * you may not use this file except in compliance with the License.
+    * You may obtain a copyFile of the License at
+    *
+    * http://www.apache.org/licenses/LICENSE-2.0
+    *
+    * Unless required by applicable law or agreed to in writing, software
+    * distributed under the License is distributed on an "AS IS" BASIS,
+    * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    * See the License for the specific language governing permissions and
+    * limitations under the License.
+    *-->
+
+
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:divider="@color/vv_gray"
+    android:dividerHeight="1dp">
+
+    <com.vitaltriage.app.ProfileImagePreference
+        android:key="userImage"
+        android:layout="@layout/vv_preference_user_image"
+        app:iconSpaceReserved="false" />
+
+    <com.vitaltriage.app.ProfileNamePreference
+        android:key="changeName"
+        android:layout="@layout/vv_preference_user_name"
+        app:iconSpaceReserved="false" />
+
+    <androidx.preference.PreferenceCategory
+        android:title="@string/vv_preference_header_input"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false">
+        <androidx.preference.Preference
+            android:key="micSensibilitySetting"
+            app:iconSpaceReserved="false" />
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        android:title="@string/vv_preference_header_language"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false">
+        <androidx.preference.SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="languagesNNQualityLow"
+            android:summary="@string/vv_preference_description_languages_quality"
+            android:title="@string/vv_preference_title_languages_quality"
+            app:iconSpaceReserved="false" />
+        <androidx.preference.SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="languagesQualityLow"
+            android:summary="@string/vv_preference_description_support_tts_quality"
+            android:title="@string/vv_preference_title_support_tts_quality"
+            app:iconSpaceReserved="false" />
+        <androidx.preference.Preference
+            android:dialogTitle="Application language"
+            android:key="language"
+            android:title="@string/vv_preference_title_language"
+            app:iconSpaceReserved="false" />
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        android:title="@string/vv_preference_header_output"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false">
+        <androidx.preference.Preference
+            android:key="tts"
+            android:summary="@string/vv_preference_description_tts"
+            android:title="@string/vv_preference_title_tts"
+            app:iconSpaceReserved="false" />
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory
+        android:title="@string/vv_preference_header_advanced"
+        app:allowDividerAbove="true"
+        app:iconSpaceReserved="false">
+        <androidx.preference.Preference
+            android:defaultValue="false"
+            android:key="ShowOriginalTranscriptionMsgPreference"
+            android:summary="@string/vv_preference_description_show_original_transcription_msg_preference"
+            android:title="@string/vv_preference_title_show_original_transcription"
+            app:iconSpaceReserved="false" />
+        <androidx.preference.Preference
+            android:key="SpeechTimeoutSetting"
+            app:iconSpaceReserved="false" />
+        <androidx.preference.Preference
+            android:key="PrevVoiceDurationSetting"
+            app:iconSpaceReserved="false" />
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory android:title="One Triage" app:iconSpaceReserved="false">
+        <androidx.preference.Preference android:key="conversation" android:title="@string/vv_bt_open"
+            android:summary="@string/vv_bt_disclosure" app:iconSpaceReserved="false"/>
+        <androidx.preference.SwitchPreferenceCompat android:key="englishVoiceTranslation" android:title="@string/vv_translation_title"
+            android:summary="@string/vv_translation_summary"
+            app:iconSpaceReserved="false" />
+        <androidx.preference.Preference android:key="translationModels" android:title="@string/vv_translation_prepare"
+            android:summary="@string/vv_translation_models_summary"
+            app:iconSpaceReserved="false" />
+        <androidx.preference.Preference android:key="patientLanguages" android:title="@string/vv_patient_languages" android:summary="@string/vv_patient_summary" app:iconSpaceReserved="false"/>
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory android:title="@string/vv_developer" app:iconSpaceReserved="false">
+        <androidx.preference.ListPreference android:key="whisperModel" android:title="@string/vv_model_title"
+            android:dialogTitle="@string/vv_model_title" app:iconSpaceReserved="false" />
+        <androidx.preference.Preference android:key="prepareWhisper" android:title="@string/vv_prepare_whisper"
+            android:summary="@string/vv_prepare_whisper_summary" app:iconSpaceReserved="false" />
+        <androidx.preference.SwitchPreferenceCompat android:key="offlineWhisper" android:title="Offline Whisper"
+            android:summary="@string/vv_whisper_summary"
+            app:iconSpaceReserved="false" />
+        <androidx.preference.SwitchPreferenceCompat android:key="sourceCapture" android:title="@string/vv_source_title"
+            android:summary="@string/vv_source_summary"
+            app:iconSpaceReserved="false" />
+        <androidx.preference.Preference android:key="developer" android:title="Demo / backend" android:summary="@string/vv_backend_summary" app:iconSpaceReserved="false"/>
+    </androidx.preference.PreferenceCategory>
+</androidx.preference.PreferenceScreen>

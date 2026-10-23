@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_privacy_title">Privacy and safety (English)</string>
+    <string name="vv_licenses_title">Third-party licenses</string>
+    <string name="vv_access_save">Save access on this device</string>
+    <string name="vv_access_forget">Forget saved access</string>
+    <string name="vv_access_note">Optional encrypted storage for your separate backend credential, bound to this HTTPS address. Never enter an OpenAI key.</string>
+    <string name="vv_access_saved">Access saved with Android Keystore encryption.</string>
+    <string name="vv_access_forgotten">Saved access removed.</string>
+    <string name="vv_access_error">Could not save access. Use an HTTPS address and a separate backend credential (32–256 characters), not an OpenAI key.</string>
+</resources>

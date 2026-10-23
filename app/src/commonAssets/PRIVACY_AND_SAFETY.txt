@@ -1,0 +1,17 @@
+One Triage — Privacy and safety
+
+You choose whether to send your reviewed original text to OpenAI for an assessment. The personal device build connects directly to OpenAI over HTTPS. No Windows backend is required. Requests ask OpenAI not to store the response, but this does not promise zero provider retention. The provider's account and data policies still apply.
+
+Whisper speech recognition and NLLB translation run locally after their model files are prepared. Model downloads need internet and contact the listed download hosts. Android system speech recognition is an optional alternative and its provider may send audio to a server. Android TTS uses available installed voices. Offline voice availability depends on the device. Optional ML Kit translation downloads language models from Google; its model and service policies apply.
+
+The app keeps original text separate from translated display text. Translation can change meaning. You can review and edit the original before approving an assessment. Conversation text, recordings, and assessment results are not intended as a saved patient history. Profile information, selected settings, model files, and API usage records are stored on the device. Android app data management or uninstalling can remove them. Do not erase app data merely to refresh a model or a usage limit.
+
+Bluetooth Conversation sends a selected message only through an explicit sharing action to a connected peer. The receiving device can retain what it receives. Do not share private health information without the person's permission.
+
+The personal APK contains the owner's OpenAI API key. That key can be extracted from the APK. Keep the APK private. The key is not an Android Keystore secret and obfuscation does not make it safe to distribute. Diagnostic output must not include this key, health text, or audio.
+
+The personal test allowance is 100 total attempts, including preserved earlier attempts and chargeable failed attempts. The separate conservative spending stop is USD 3; the owner's total authorization remains USD 5. A request reserves its estimated upper cost before it starts. Unknown usage keeps that reservation. Restarting or updating preserves the saved history. This local protection is not an account-wide spending limit across other copies or applications.
+
+AI assessments and translations can be wrong. They do not establish a diagnosis. The numerical score is experimental and is not clinically calibrated. Do not delay emergency assistance while waiting for an answer. Uncertain or invalid results are not treated as low urgency.
+
+NLLB model weights have separate licensing and usage restrictions, including noncommercial research conditions and limitations on medical translation. See the model preparation information and bundled third-party notices. Software tests are not clinical validation.

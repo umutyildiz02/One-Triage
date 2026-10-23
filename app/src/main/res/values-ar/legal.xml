@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_privacy_title">الخصوصية والسلامة (بالإنجليزية)</string>
+    <string name="vv_licenses_title">تراخيص الجهات الخارجية</string>
+    <string name="vv_access_save">حفظ الوصول على هذا الجهاز</string>
+    <string name="vv_access_forget">نسيان الوصول المحفوظ</string>
+    <string name="vv_access_note">تخزين مشفر اختياري لبيانات اعتماد الخادم المنفصلة مرتبط بعنوان HTTPS هذا. لا تدخل مفتاح OpenAI مطلقًا.</string>
+    <string name="vv_access_saved">تم حفظ الوصول بتشفير Android Keystore.</string>
+    <string name="vv_access_forgotten">تم حذف الوصول المحفوظ.</string>
+    <string name="vv_access_error">تعذر حفظ الوصول. استخدم عنوان HTTPS وبيانات اعتماد خادم منفصلة من 32 إلى 256 محرفًا، وليس مفتاح OpenAI.</string>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Labels adapted from RTranslator, Copyright 2016 Luca Martino, Apache-2.0. Data notices updated for VitalTriage; optional local Whisper and explicit analysis approval. -->
+<resources>
+    <string name="vv_preference_description_speech_timeout">Select the silence duration before the source recorder finishes an utterance. Recognized text still requires review and approval.</string>
+    <string name="vv_preference_description_prev_voice_duration">Select how much audio before detected speech is retained by the source recorder.</string>
+    <string name="vv_forward">forward</string>
+    <string name="vv_select_tts">Select TTS</string>
+    <string name="vv_age_check_box">I declare that I am at least 14 years old</string>
+    <string name="vv_privacy_check_box">I have read the notice and understand the data processing described above. Analysis requires a separate explicit approval.</string>
+    <string name="vv_dialog_select_personal_language">Select interface language</string>
+    <string name="vv_dialog_select_first_language">Select primary language</string>
+    <string name="vv_dialog_insert_name">Insert your name</string>
+    <string name="vv_menu_image_select_from_gallery">Select from gallery</string>
+    <string name="vv_menu_image_remove">Remove</string>
+    <string name="vv_hint_user_name">Name</string>
+    <string name="vv_error_missing_username">Insert a name</string>
+    <string name="vv_error_download">No model download is performed in this version.</string>
+    <string name="vv_error_transfer">No model transfer is performed in this version.</string>
+    <string name="vv_error_ram">Not enough memory for local processing. Close other apps or use typed input.</string>
+    <string name="vv_error_storage">Low storage space, the download may fail</string>
+    <string name="vv_title_image_selector">user image</string>
+    <string name="vv_title_fragment_notice">Notice</string>
+    <string name="vv_title_fragment_user_data">Insert your data</string>
+    <string name="vv_title_fragment_download">Preparation</string>
+    <string name="vv_title_activity_settings">Settings</string>
+    <string name="vv_description_fragment_user_data">Your nickname and optional photo are stored on this device and are not sent with assessments. When you explicitly connect a nearby Conversation, your nickname is shared with that peer; the photo is not shared. Do not use patient information here.</string>
+    <string name="vv_description_fragment_download">Offline Whisper requires a verified local model. If it is missing, explicitly prepare it from Settings using an internet connection. This page does not download models. The alternative system speech provider depends on the device. Typed input remains available.</string>
+    <string name="vv_description_notice">One Triage helps you describe symptoms and request an AI assessment. Whisper processes audio on this device; the optional Android speech service may use the internet. Only the original text you review and approve is sent to OpenAI. AI can be wrong and is not an emergency service. For immediate danger, contact local emergency services.</string>
+    <string name="vv_description_tts">The speaker button reads text using an installed offline system voice. Voice availability depends on the selected language and device. No voice model is downloaded automatically.</string>
+    <string name="vv_preference_header_language">Language</string>
+    <string name="vv_preference_header_output">Output</string>
+    <string name="vv_preference_header_input">Input</string>
+    <string name="vv_preference_header_advanced">Advanced</string>
+    <string name="vv_preference_title_mic_sensitivity">Microphone sensitivity</string>
+    <string name="vv_preference_title_languages_quality">Support low quality languages</string>
+    <string name="vv_preference_title_show_original_transcription">Show original transcriptions beyond the translation</string>
+    <string name="vv_preference_title_support_tts_quality">Support languages with low quality tts</string>
+    <string name="vv_preference_title_language">Personal language</string>
+    <string name="vv_preference_title_tts">Text to speech</string>
+    <string name="vv_preference_title_speech_timeout">End of voice timeout</string>
+    <string name="vv_preference_title_prev_voice_duration">Voice anticipation duration</string>
+    <string name="vv_preference_description_mic_sensitivity">Select the volume level you need to start and maintain voice recognition</string>
+    <string name="vv_preference_description_languages_quality">It allow to also supports languages that have low translation or speech recognition quality</string>
+    <string name="vv_preference_description_show_original_transcription_msg_preference">It allows to show the original transcription beyond the translation of the message.</string>
+    <string name="vv_preference_description_support_tts_quality">It allow to also supports languages that have a low quality speech synthesizer</string>
+    <string name="vv_preference_description_tts">Open device speech settings. The speaker button uses an installed offline voice; unavailable voices show an error.</string>
+</resources>

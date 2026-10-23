@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_prepare_whisper">Seçili Whisper modelini hazırla</string>
+    <string name="vv_prepare_whisper_summary">Açık HTTPS indirmesi ve sağlama doğrulaması. Mevcut modeller yeniden kullanılır; kısmi indirmeler sürdürülebilir.</string>
+    <string name="vv_translation_engine">Çeviri motoru</string>
+    <string name="vv_model_prepare">Hazırla</string>
+    <string name="vv_model_pause">Model hazırlığını duraklat</string>
+    <string name="vv_model_network_notice">Açık HTTPS indirmesi. Doğrulanmış modeller yeniden kullanılır. Ayrılmak indirmeyi duraklatır; kısmi dosyalar sürdürülebilir.</string>
+    <string name="vv_model_preparing">Model dosyaları indiriliyor ve doğrulanıyor…</string>
+    <string name="vv_model_ready">Dosyalar doğrulandı ve hazır. Bu, klinik doğruluk kanıtı değildir.</string>
+    <string name="vv_model_paused">Duraklatıldı. Kısmi dosyalar korundu; sürdürmek için Hazırla’ya dokunun.</string>
+    <string name="vv_model_error">Hazırlık tamamlanmadı. Ağ ve depolamayı kontrol edip yeniden deneyin. Mevcut modeller korundu.</string>
+    <string name="vv_nllb_title">NLLB araştırma çevirisi</string>
+    <string name="vv_nllb_summary">1,00 GB · isteğe bağlı · cihazda çeviri</string>
+    <string name="vv_nllb_notice">NLLB, CC-BY-NC-4.0 lisanslı araştırma modellerini kullanır. Klinik doğrulaması yoktur; yayıncısı tıbbi çeviri için tasarlamamıştır. Özgün metni koruyun; yalnızca kontrol edilen özgün metin değerlendirilir. Model indirmesi yaklaşık 1 GB.</string>
+    <string name="vv_translation_enable_whisper">Önce Offline Whisper’ı açın. İsteğe bağlı çeviri ses tanımadan sonra yapılır; yazılı metin özgün kalır.</string>
+    <string name="vv_model_error_network">Ağ veya DNS kullanılamıyor. Mevcut modeller korundu. İnternet bağlantısını düzeltip yeniden deneyin.</string>
+    <string name="vv_model_error_timeout">Model aktarımı zaman aşımına uğradı. Kısmi dosya korundu; sürdürmek için yeniden deneyin.</string>
+    <string name="vv_model_error_tls">Güvenli bağlantı doğrulanamadı. Cihaz tarihini ve ağı kontrol edin; sertifika doğrulamasını kapatmayın.</string>
+    <string name="vv_model_error_storage">Model ve geçici hazırlık alanı için boş depolama yetersiz. Mevcut modeller korundu.</string>
+    <string name="vv_model_error_integrity">İndirilen dosyanın bütünlük doğrulaması başarısız oldu; dosya reddedildi. Mevcut modeller korundu. Yeniden denemeyi açıkça başlatın.</string>
+    <string name="vv_model_error_server">Model sunucusu aktarımı reddetti. Model kurulmadı; bağlantı veya sunucu durumu değiştikten sonra yeniden deneyin.</string>
+</resources>

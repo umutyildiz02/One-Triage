@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_catalog_quality_summary">يوسع قائمة اللغات الأصلية. يُتحقق من التعرف على الكلام وجاهزية نماذج الترجمة والأصوات المثبتة بشكل منفصل. لا يضمن جودة الترجمة.</string>
+    <string name="vv_tts_quality_summary">يسمح بالأصوات المحلية المثبتة منخفضة الجودة وأصوات التوافق القديمة عند عدم توفر صوت أفضل. لا ينزّل أصواتًا.</string>
+    <string name="vv_catalog_unsupported">رمز لغة غير معروف</string>
+</resources>

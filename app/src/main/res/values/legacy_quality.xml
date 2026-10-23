@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_catalog_quality_summary">Expands the original language catalog. Speech, translation model readiness and installed reading voices are checked separately. This is not a translation quality guarantee.</string>
+    <string name="vv_tts_quality_summary">Allows installed offline voices below normal quality and legacy compatibility voices when no better voice is available. Does not download voices.</string>
+    <string name="vv_catalog_unsupported">Unrecognized language code</string>
+</resources>

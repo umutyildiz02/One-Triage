@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Source layout labels localized without changing the VitalVoice structure. -->
+<resources>
+    <string name="vv_forward">التالي</string>
+    <string name="vv_select_tts">اختيار النطق</string>
+    <string name="vv_age_check_box">أقر بأن عمري 14 سنة على الأقل</string>
+    <string name="vv_privacy_check_box">قرأت الإشعار وفهمت معالجة البيانات الموضحة أعلاه. يتطلب التحليل موافقة صريحة منفصلة.</string>
+    <string name="vv_dialog_select_personal_language">اختيار لغة الواجهة</string>
+    <string name="vv_dialog_select_first_language">اختيار لغة الكلام</string>
+    <string name="vv_dialog_insert_name">أدخل اسمك</string>
+    <string name="vv_menu_image_select_from_gallery">اختيار من المعرض</string>
+    <string name="vv_menu_image_remove">إزالة</string>
+    <string name="vv_hint_user_name">الاسم</string>
+    <string name="vv_error_missing_username">أدخل اسماً</string>
+    <string name="vv_error_download">لا يتم تنزيل نموذج في هذه الشاشة.</string>
+    <string name="vv_error_transfer">لا يتم نقل نموذج في هذه الشاشة.</string>
+    <string name="vv_error_ram">الذاكرة غير كافية للمعالجة المحلية. أغلق التطبيقات الأخرى أو اكتب النص.</string>
+    <string name="vv_error_storage">مساحة التخزين منخفضة؛ قد يفشل الإعداد.</string>
+    <string name="vv_title_image_selector">صورة الملف الشخصي</string>
+    <string name="vv_title_fragment_notice">إشعار</string>
+    <string name="vv_title_fragment_user_data">أدخل معلوماتك</string>
+    <string name="vv_title_fragment_download">الإعداد</string>
+    <string name="vv_title_activity_settings">الإعدادات</string>
+    <string name="vv_description_fragment_user_data">يُحفظ اسمك المستعار وصورتك الاختيارية على الجهاز ولا يُرسلان مع التقييمات. عند اختيار اتصال محادثة قريبة صراحةً يُشارك الاسم المستعار مع ذلك الجهاز، دون الصورة. لا تستخدم بيانات المرضى هنا.</string>
+    <string name="vv_description_fragment_download">يتطلب Whisper دون اتصال نموذجاً محلياً متحققاً منه. إذا كان مفقوداً فقم بإعداده صراحةً من الإعدادات عبر الإنترنت. لا تُنزل هذه الصفحة نماذج. تعتمد خدمة التعرف البديلة على الجهاز. تظل الكتابة متاحة.</string>
+    <string name="vv_description_notice">يساعد One Triage على وصف الأعراض وطلب تقييم بالذكاء الاصطناعي. يعالج Whisper الصوت على الجهاز؛ قد تستخدم خدمة Android الاختيارية الإنترنت. يُرسل النص الأصلي الذي تراجعه وتوافق عليه فقط إلى OpenAI. قد يخطئ الذكاء الاصطناعي وهو ليس خدمة طوارئ. عند الخطر الفوري اتصل بالطوارئ المحلية.</string>
+    <string name="vv_description_tts">يقرأ زر الصوت النص بصوت نظام مثبت يعمل دون اتصال. يعتمد التوفر على اللغة والجهاز. لا يُنزل نموذج صوتي تلقائياً.</string>
+    <string name="vv_preference_header_language">اللغة</string>
+    <string name="vv_preference_header_output">الإخراج</string>
+    <string name="vv_preference_header_input">الإدخال</string>
+    <string name="vv_preference_header_advanced">متقدم</string>
+    <string name="vv_preference_title_mic_sensitivity">حساسية الميكروفون</string>
+    <string name="vv_preference_title_languages_quality">دعم اللغات منخفضة الجودة</string>
+    <string name="vv_preference_title_show_original_transcription">عرض النص الأصلي مع الترجمة</string>
+    <string name="vv_preference_title_support_tts_quality">دعم أصوات النطق منخفضة الجودة</string>
+    <string name="vv_preference_title_language">اللغة الشخصية</string>
+    <string name="vv_preference_title_tts">تحويل النص إلى كلام</string>
+    <string name="vv_preference_title_speech_timeout">مهلة انتهاء الكلام</string>
+    <string name="vv_preference_title_prev_voice_duration">مدة التخزين قبل الكلام</string>
+    <string name="vv_preference_description_mic_sensitivity">اختر مستوى الصوت اللازم لبدء اكتشاف الكلام واستمراره.</string>
+    <string name="vv_preference_description_speech_timeout">اختر مدة الصمت قبل إنهاء التسجيل. يظل النص المتعرف عليه بحاجة إلى المراجعة والموافقة.</string>
+    <string name="vv_preference_description_prev_voice_duration">اختر مقدار الصوت المحتفظ به قبل بداية الكلام المكتشفة.</string>
+    <string name="vv_preference_description_tts">يفتح إعدادات الصوت في الجهاز. يستخدم الزر صوتاً مثبتاً دون اتصال؛ يُعرض خطأ عند عدم توفره.</string>
+    <string name="vv_preference_description_languages_quality">دعم اللغات منخفضة جودة الترجمة أو التعرف.</string>
+    <string name="vv_preference_description_show_original_transcription_msg_preference">يعرض النص الأصلي مع ترجمة الرسالة.</string>
+    <string name="vv_preference_description_support_tts_quality">دعم اللغات ذات جودة النطق المنخفضة.</string>
+</resources>

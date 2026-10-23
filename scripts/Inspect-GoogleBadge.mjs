@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+const response=await fetch('https://docs.cloud.google.com/static/translate/images/text-attribution.png');
+if(!response.ok)throw Error('Official image unavailable');
+const bytes=Buffer.from(await response.arrayBuffer());
+if(bytes.length>1_000_000 || bytes.subarray(1,4).toString()!=='PNG')throw Error('Unexpected badge image');
+fs.writeFileSync('.runtime/google-text-attribution.png',bytes);
+fs.mkdirSync('app/src/main/res/drawable-nodpi',{recursive:true});
+const target='app/src/main/res/drawable-nodpi/google_translation_attribution.png';
+if(fs.existsSync(target) && !fs.readFileSync(target).equals(bytes))throw Error('Existing official badge differs; refusing overwrite');
+if(!fs.existsSync(target))fs.writeFileSync(target,bytes,{flag:'wx'});
+console.log(JSON.stringify({bytes:bytes.length,width:bytes.readUInt32BE(16),height:bytes.readUInt32BE(20)}));

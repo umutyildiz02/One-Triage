@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp" android:height="40dp" android:viewportWidth="1850" android:viewportHeight="370">
+    <!-- Vector reconstruction of the owner's supplied OneVoice reference, 2026-10-22.
+         Flat navy/red paths intentionally omit the raster reference's subtle texture. -->
+    <path android:fillColor="#0C294F" android:fillType="evenOdd"
+        android:pathData="M185,10 A175,175 0,1 1,185,360 A175,175 0,1 1,185,10 Z M185,65 A120,120 0,1 0,185,305 A120,120 0,1 0,185,65 Z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M300,182 H368 V208 H300 Z"/>
+    <path android:fillColor="@android:color/transparent" android:strokeColor="#EF0D28" android:strokeWidth="19" android:strokeLineCap="round" android:strokeLineJoin="round"
+        android:pathData="M70,195 H120 L137,165 L157,233 L187,20 L216,350 L237,182 L248,195 H352"/>
+    <path android:fillColor="#0C294F" android:pathData="M375,130 Q375,125 380,125 H428 Q433,125 433,130 V149 Q465,118 506,118 Q584,118 584,213 V337 H528 V224 Q528,172 487,172 Q432,172 432,231 V337 H375 Z"/>
+    <path android:fillColor="#0C294F" android:fillType="evenOdd" android:pathData="M829,249 H651 Q662,296 711,296 Q749,296 774,270 L815,297 Q777,345 711,345 Q594,345 594,231 Q594,118 711,118 Q829,118 829,230 Z M654,207 H772 Q757,165 713,165 Q669,165 654,207 Z"/>
+    <path android:fillColor="#EF0D28" android:pathData="M787,60 H850 Q857,60 861,68 L951,261 L1046,68 Q1050,60 1057,60 H1115 L978,330 Q974,337 966,337 H930 Q923,337 919,330 Z"/>
+    <path android:fillColor="#0C294F" android:fillType="evenOdd" android:pathData="M1178,118 A113,113 0,1 1,1178,344 A113,113 0,1 1,1178,118 Z M1178,172 A59,59 0,1 0,1178,290 A59,59 0,1 0,1178,172 Z"/>
+    <path android:fillColor="#0C294F" android:pathData="M1320,125 H1376 V337 H1320 Z M1384,73 A36,36 0,1 1,1312,73 A36,36 0,1 1,1384,73 Z"/>
+    <path android:fillColor="#0C294F" android:pathData="M1604,163 L1558,191 Q1538,170 1506,170 Q1450,170 1450,231 Q1450,292 1506,292 Q1539,292 1561,270 L1605,303 Q1567,345 1503,345 Q1391,345 1391,231 Q1391,118 1503,118 Q1572,118 1604,163 Z"/>
+    <path android:fillColor="#0C294F" android:fillType="evenOdd" android:pathData="M1840,249 H1662 Q1673,296 1722,296 Q1760,296 1785,270 L1826,297 Q1788,345 1722,345 Q1605,345 1605,231 Q1605,118 1722,118 Q1840,118 1840,230 Z M1665,207 H1783 Q1768,165 1724,165 Q1680,165 1665,207 Z"/>
+</vector>

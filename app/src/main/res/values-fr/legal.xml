@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_privacy_title">Confidentialité et sécurité (anglais)</string>
+    <string name="vv_licenses_title">Licences tierces</string>
+    <string name="vv_access_save">Enregistrer l’accès sur cet appareil</string>
+    <string name="vv_access_forget">Oublier l’accès enregistré</string>
+    <string name="vv_access_note">Stockage chiffré facultatif de votre identifiant backend distinct, lié à cette adresse HTTPS. Ne saisissez jamais de clé OpenAI.</string>
+    <string name="vv_access_saved">Accès enregistré avec le chiffrement Android Keystore.</string>
+    <string name="vv_access_forgotten">Accès enregistré supprimé.</string>
+    <string name="vv_access_error">Impossible d’enregistrer l’accès. Utilisez une adresse HTTPS et un identifiant backend distinct (32–256 caractères), pas une clé OpenAI.</string>
+</resources>

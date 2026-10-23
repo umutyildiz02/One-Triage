@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Source layout labels localized without changing the VitalVoice structure. -->
+<resources>
+    <string name="vv_forward">suivant</string>
+    <string name="vv_select_tts">Choisir la synthèse vocale</string>
+    <string name="vv_age_check_box">Je déclare avoir au moins 14 ans</string>
+    <string name="vv_privacy_check_box">J’ai lu la notice et compris le traitement des données décrit ci-dessus. L’analyse nécessite un accord explicite séparé.</string>
+    <string name="vv_dialog_select_personal_language">Choisir la langue de l’interface</string>
+    <string name="vv_dialog_select_first_language">Choisir la langue parlée</string>
+    <string name="vv_dialog_insert_name">Saisir votre nom</string>
+    <string name="vv_menu_image_select_from_gallery">Choisir dans la galerie</string>
+    <string name="vv_menu_image_remove">Supprimer</string>
+    <string name="vv_hint_user_name">Nom</string>
+    <string name="vv_error_missing_username">Saisir un nom</string>
+    <string name="vv_error_download">Aucun modèle n’est téléchargé sur cet écran.</string>
+    <string name="vv_error_transfer">Aucun modèle n’est transféré sur cet écran.</string>
+    <string name="vv_error_ram">Mémoire insuffisante pour le traitement local. Fermez les autres applications ou saisissez le texte.</string>
+    <string name="vv_error_storage">Espace de stockage faible ; la préparation peut échouer.</string>
+    <string name="vv_title_image_selector">Photo de profil</string>
+    <string name="vv_title_fragment_notice">Notice</string>
+    <string name="vv_title_fragment_user_data">Saisir vos informations</string>
+    <string name="vv_title_fragment_download">Préparation</string>
+    <string name="vv_title_activity_settings">Paramètres</string>
+    <string name="vv_description_fragment_user_data">Votre pseudonyme et votre photo facultative sont stockés sur cet appareil, sans être envoyés avec les évaluations. Lors d’une connexion Conversation explicitement choisie, le pseudonyme est partagé avec cet appareil, mais pas la photo. N’utilisez pas de données de patient ici.</string>
+    <string name="vv_description_fragment_download">Whisper hors ligne nécessite un modèle local vérifié. Si nécessaire, préparez-le explicitement dans les paramètres avec une connexion Internet. Cette page ne télécharge aucun modèle. Le fournisseur vocal système dépend de l’appareil. La saisie écrite reste disponible.</string>
+    <string name="vv_description_notice">One Triage aide à décrire les symptômes et à demander une évaluation par IA. Whisper traite le son sur cet appareil ; le service vocal Android facultatif peut utiliser Internet. Seul le texte original relu et approuvé est envoyé à OpenAI. L’IA peut se tromper et ne remplace pas les urgences. En cas de danger immédiat, contactez les secours locaux.</string>
+    <string name="vv_description_tts">Le bouton audio lit le texte avec une voix système hors ligne installée. Sa disponibilité dépend de la langue et de l’appareil. Aucun modèle vocal n’est téléchargé automatiquement.</string>
+    <string name="vv_preference_header_language">Langue</string>
+    <string name="vv_preference_header_output">Sortie</string>
+    <string name="vv_preference_header_input">Entrée</string>
+    <string name="vv_preference_header_advanced">Avancé</string>
+    <string name="vv_preference_title_mic_sensitivity">Sensibilité du microphone</string>
+    <string name="vv_preference_title_languages_quality">Prise en charge des langues de qualité faible</string>
+    <string name="vv_preference_title_show_original_transcription">Afficher la transcription originale avec la traduction</string>
+    <string name="vv_preference_title_support_tts_quality">Prise en charge des voix de qualité faible</string>
+    <string name="vv_preference_title_language">Langue personnelle</string>
+    <string name="vv_preference_title_tts">Synthèse vocale</string>
+    <string name="vv_preference_title_speech_timeout">Délai de fin de parole</string>
+    <string name="vv_preference_title_prev_voice_duration">Durée du tampon avant la parole</string>
+    <string name="vv_preference_description_mic_sensitivity">Choisir le niveau sonore nécessaire pour déclencher et maintenir la détection vocale.</string>
+    <string name="vv_preference_description_speech_timeout">Choisir la durée de silence avant la fin de l’enregistrement. Le texte reconnu nécessite toujours une relecture et un accord.</string>
+    <string name="vv_preference_description_prev_voice_duration">Choisir la durée audio conservée avant le début de parole détecté.</string>
+    <string name="vv_preference_description_tts">Ouvre les réglages vocaux de l’appareil. Le bouton utilise une voix hors ligne installée ; son absence affiche une erreur.</string>
+    <string name="vv_preference_description_languages_quality">Prise en charge des langues de qualité de traduction ou reconnaissance faible.</string>
+    <string name="vv_preference_description_show_original_transcription_msg_preference">Affiche la transcription originale avec la traduction du message.</string>
+    <string name="vv_preference_description_support_tts_quality">Prise en charge des langues avec synthèse vocale de qualité faible.</string>
+</resources>

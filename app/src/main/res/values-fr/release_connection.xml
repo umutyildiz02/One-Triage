@@ -1,0 +1,4 @@
+<resources>
+    <string name="vv_connection_settings">Paramètres de connexion</string>
+    <string name="vv_connection_settings_summary">Adresse du service HTTPS et votre propre identifiant d’accès. Aucune clé API partagée dans cette application.</string>
+</resources>

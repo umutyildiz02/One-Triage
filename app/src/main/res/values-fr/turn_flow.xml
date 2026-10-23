@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_read_translated_turns">Lire les phrases traduites</string>
+    <string name="vv_read_translated_turns_summary">Pendant une session micro lancée par vous, lit les traductions avec une voix locale installée. L’enregistrement automatique reprend après la lecture ; Arrêter ou Retour termine la session. Des erreurs de traduction restent possibles.</string>
+</resources>

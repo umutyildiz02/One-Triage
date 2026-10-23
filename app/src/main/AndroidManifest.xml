@@ -1,0 +1,21 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE"/>
+    <queries><intent><action android:name="android.speech.RecognitionService"/></intent><intent><action android:name="android.intent.action.TTS_SERVICE"/></intent></queries>
+    <application android:label="One Triage" android:theme="@style/Theme.VitalTriage" android:allowBackup="false" android:fullBackupContent="false" android:dataExtractionRules="@xml/data_extraction_rules" android:icon="@drawable/onevoice_icon" android:supportsRtl="true" android:usesCleartextTraffic="false">
+        <activity android:name=".MainActivity" android:exported="false" android:launchMode="singleTask" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".LegacyAccessActivity" android:exported="false" android:theme="@style/VitalLegacy" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ConversationActivity" android:exported="false" android:theme="@style/VitalLegacy" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ModelPreparationActivity" android:exported="false" android:theme="@style/VitalLegacy"/>
+        <activity android:name=".LegacySettingsActivity" android:exported="false" android:theme="@style/VitalLegacySettings"/>
+        <activity android:name=".LegacyLoadingActivity" android:exported="true" android:noHistory="true" android:launchMode="singleTask" android:theme="@style/VitalLegacyStarting"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity>
+    </application>
+</manifest>

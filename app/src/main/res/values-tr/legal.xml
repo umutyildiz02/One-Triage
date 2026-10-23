@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_privacy_title">Gizlilik ve güvenlik (İngilizce)</string>
+    <string name="vv_licenses_title">Üçüncü taraf lisansları</string>
+    <string name="vv_access_save">Erişimi bu cihazda sakla</string>
+    <string name="vv_access_forget">Kayıtlı erişimi unut</string>
+    <string name="vv_access_note">Ayrı backend kimlik bilginiz bu HTTPS adresine bağlı olarak isteğe bağlı şifrelenir. OpenAI anahtarını asla girmeyin.</string>
+    <string name="vv_access_saved">Erişim Android Keystore şifrelemesiyle saklandı.</string>
+    <string name="vv_access_forgotten">Kayıtlı erişim kaldırıldı.</string>
+    <string name="vv_access_error">Erişim saklanamadı. HTTPS adresi ve OpenAI anahtarı yerine ayrı backend kimlik bilgisi (32–256 karakter) kullanın.</string>
+</resources>

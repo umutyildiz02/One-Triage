@@ -1,0 +1,4 @@
+<resources>
+    <string name="vv_connection_settings">Bağlantı ayarları</string>
+    <string name="vv_connection_settings_summary">HTTPS hizmet adresi ve size ait erişim belirteci. Bu uygulamada ortak API anahtarı saklanmaz.</string>
+</resources>

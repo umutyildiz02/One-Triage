@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Visual tokens from the user's RTranslator-2.00 VitalVoice resources. Domain riskColor is unchanged. -->
+<resources>
+    <color name="primary">#DDF7E8</color>
+    <color name="voice_dark">#096827</color>
+    <color name="voice_bubble">#D5F2FC</color>
+    <color name="voice_text">#212121</color>
+    <color name="urgency_low">#2AA43C</color>
+    <color name="urgency_medium">#FFBD00</color>
+    <color name="urgency_high">#FF5200</color>
+    <color name="urgency_critical">#E60000</color>
+    <dimen name="voice_language_margin">30dp</dimen>
+    <dimen name="voice_language_radius">28dp</dimen>
+    <dimen name="voice_content_radius">24dp</dimen>
+    <dimen name="voice_mic_edge_margin">48dp</dimen>
+    <dimen name="voice_mic_muted">72dp</dimen>
+    <dimen name="voice_mic_normal">72dp</dimen>
+    <dimen name="voice_mic_listening">76dp</dimen>
+</resources>

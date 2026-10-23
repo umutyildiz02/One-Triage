@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_read_translated_turns">قراءة المقاطع المترجمة</string>
+    <string name="vv_read_translated_turns_summary">خلال جلسة ميكروفون تبدأها أنت، تُقرأ الترجمات بصوت محلي مثبت. يُستأنف التسجيل التلقائي بعد القراءة؛ الإيقاف أو الرجوع ينهي الجلسة. تبقى أخطاء ترجمة معروفة.</string>
+</resources>

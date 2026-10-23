@@ -1,0 +1,13 @@
+// Explicit local/mock-test audit only. Does not configure or call a live gateway.
+allprojects {
+    tasks.withType(Test).configureEach {
+        outputs.upToDateWhen { false }
+        afterSuite { descriptor, result ->
+            if (descriptor.parent == null) {
+                println("VT_TEST_SUMMARY task=" + path + " total=" + result.testCount +
+                    " passed=" + result.successfulTestCount + " failed=" + result.failedTestCount +
+                    " skipped=" + result.skippedTestCount)
+            }
+        }
+    }
+}

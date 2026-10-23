@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_prepare_whisper">Prepare selected Whisper model</string>
+    <string name="vv_prepare_whisper_summary">Explicit HTTPS download with checksum verification. Existing models are reused; partial downloads can resume.</string>
+    <string name="vv_translation_engine">Translation engine</string>
+    <string name="vv_model_prepare">Prepare</string>
+    <string name="vv_model_pause">Pause model preparation</string>
+    <string name="vv_model_network_notice">Explicit HTTPS download. Existing verified models are reused. Leaving pauses transfer; partial bytes can resume.</string>
+    <string name="vv_model_preparing">Downloading and verifying model files…</string>
+    <string name="vv_model_ready">Model files verified and ready.</string>
+    <string name="vv_model_paused">Paused. Partial files retained; tap Prepare to resume.</string>
+    <string name="vv_model_error">Preparation incomplete. Check network and storage; retry explicitly. Existing models are preserved.</string>
+    <string name="vv_nllb_title">NLLB offline translation</string>
+    <string name="vv_nllb_summary">1.00 GB · optional · on-device translation</string>
+    <string name="vv_nllb_notice">NLLB uses CC-BY-NC-4.0 research models. Not clinically validated or intended by its publisher for medical translation. Keep the original text; only the reviewed original is assessed. Model download: about 1 GB.</string>
+    <string name="vv_translation_enable_whisper">Enable Offline Whisper first. Optional translation follows speech recognition; typed text remains original.</string>
+    <string name="vv_model_error_network">Network or DNS unavailable. Existing models are preserved. Restore internet access, then retry explicitly.</string>
+    <string name="vv_model_error_timeout">Model transfer timed out. Partial bytes are retained; retry to resume.</string>
+    <string name="vv_model_error_tls">The secure connection could not be verified. Check device date and network; do not disable certificate validation.</string>
+    <string name="vv_model_error_storage">Not enough free storage for this model and temporary preparation space. Existing models are preserved.</string>
+    <string name="vv_model_error_integrity">Downloaded bytes failed integrity verification and were rejected. Existing models are preserved; an explicit retry is required.</string>
+    <string name="vv_model_error_server">The model server rejected this transfer. No model was installed; retry only after connectivity or server availability changes.</string>
+</resources>

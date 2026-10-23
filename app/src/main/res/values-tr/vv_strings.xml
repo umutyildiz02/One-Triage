@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Source layout labels localized without changing the VitalVoice structure. -->
+<resources>
+    <string name="vv_forward">ileri</string>
+    <string name="vv_select_tts">Sesli okuma seç</string>
+    <string name="vv_age_check_box">En az 14 yaşında olduğumu beyan ediyorum</string>
+    <string name="vv_privacy_check_box">Bilgilendirmeyi okudum ve yukarıdaki veri işleyişini anladım. Analiz için ayrıca açık onay gerekir.</string>
+    <string name="vv_dialog_select_personal_language">Arayüz dilini seç</string>
+    <string name="vv_dialog_select_first_language">Konuşma dilini seç</string>
+    <string name="vv_dialog_insert_name">Adınızı girin</string>
+    <string name="vv_menu_image_select_from_gallery">Galeriden seç</string>
+    <string name="vv_menu_image_remove">Kaldır</string>
+    <string name="vv_hint_user_name">Ad</string>
+    <string name="vv_error_missing_username">Bir ad girin</string>
+    <string name="vv_error_download">Bu ekranda model indirilmez.</string>
+    <string name="vv_error_transfer">Bu ekranda model aktarılmaz.</string>
+    <string name="vv_error_ram">Yerel işlem için bellek yetersiz. Diğer uygulamaları kapatın veya yazılı giriş kullanın.</string>
+    <string name="vv_error_storage">Depolama alanı az; hazırlık başarısız olabilir.</string>
+    <string name="vv_title_image_selector">Profil fotoğrafı</string>
+    <string name="vv_title_fragment_notice">Bilgilendirme</string>
+    <string name="vv_title_fragment_user_data">Bilgilerinizi girin</string>
+    <string name="vv_title_fragment_download">Hazırlık</string>
+    <string name="vv_title_activity_settings">Ayarlar</string>
+    <string name="vv_description_fragment_user_data">Takma adınız ve isteğe bağlı fotoğrafınız cihazda saklanır; değerlendirmelerle gönderilmez. Yakındaki konuşma bağlantısını açıkça kurduğunuzda takma adınız o cihazla paylaşılır; fotoğraf paylaşılmaz. Burada hasta bilgisi kullanmayın.</string>
+    <string name="vv_description_fragment_download">Offline Whisper doğrulanmış yerel model gerektirir. Model eksikse Ayarlar üzerinden internet bağlantısıyla açıkça hazırlayın. Bu sayfa model indirmez. Alternatif sistem ses sağlayıcısı cihaza bağlıdır. Yazılı giriş her zaman kullanılabilir.</string>
+    <string name="vv_description_notice">One Triage belirtileri anlatmanıza ve yapay zekâ değerlendirmesi istemenize yardımcı olur. Whisper sesi cihazda işler; isteğe bağlı Android ses hizmeti interneti kullanabilir. Yalnız incelediğiniz ve onayladığınız özgün metin OpenAI’ye gönderilir. Yapay zekâ yanılabilir ve acil yardım hizmeti değildir. Yakın tehlikede yerel acil yardım hizmetlerine başvurun.</string>
+    <string name="vv_description_tts">Ses düğmesi kurulu çevrimdışı sistem sesiyle metni okur. Sesin kullanılabilirliği dile ve cihaza bağlıdır. Ses modeli otomatik indirilmez.</string>
+    <string name="vv_preference_header_language">Dil</string>
+    <string name="vv_preference_header_output">Çıkış</string>
+    <string name="vv_preference_header_input">Giriş</string>
+    <string name="vv_preference_header_advanced">Gelişmiş</string>
+    <string name="vv_preference_title_mic_sensitivity">Mikrofon hassasiyeti</string>
+    <string name="vv_preference_title_languages_quality">Düşük kaliteli dilleri destekle</string>
+    <string name="vv_preference_title_show_original_transcription">Çevirinin yanında özgün metni göster</string>
+    <string name="vv_preference_title_support_tts_quality">Düşük kaliteli sesli okumayı destekle</string>
+    <string name="vv_preference_title_language">Kişisel dil</string>
+    <string name="vv_preference_title_tts">Sesli okuma</string>
+    <string name="vv_preference_title_speech_timeout">Konuşma bitiş zaman aşımı</string>
+    <string name="vv_preference_title_prev_voice_duration">Konuşma öncesi tampon süresi</string>
+    <string name="vv_preference_description_mic_sensitivity">Konuşma algılamasını başlatmak ve sürdürmek için gereken ses düzeyini seçin.</string>
+    <string name="vv_preference_description_speech_timeout">Kaydedicinin konuşmayı bitirmesinden önceki sessizlik süresini seçin. Tanınan metin yine inceleme ve onay gerektirir.</string>
+    <string name="vv_preference_description_prev_voice_duration">Algılanan konuşmadan önce ne kadar sesin kaydedicide tutulacağını seçin.</string>
+    <string name="vv_preference_description_tts">Cihazın ses ayarlarını açar. Ses düğmesi kurulu çevrimdışı sesi kullanır; ses yoksa hata gösterilir.</string>
+    <string name="vv_preference_description_languages_quality">Düşük çeviri veya ses tanıma kalitesine sahip dillerin desteği.</string>
+    <string name="vv_preference_description_show_original_transcription_msg_preference">Mesaj çevirisinin yanında özgün metni gösterir.</string>
+    <string name="vv_preference_description_support_tts_quality">Düşük kaliteli sesli okumaya sahip dillerin desteği.</string>
+</resources>

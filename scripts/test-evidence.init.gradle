@@ -1,0 +1,27 @@
+import groovy.json.JsonOutput
+import org.gradle.api.tasks.testing.Test
+
+// Record fresh test execution events; no patient input or test stdout is collected.
+// Use -I scripts/test-evidence.init.gradle with the explicit free test tasks.
+gradle.projectsEvaluated {
+    allprojects {
+        tasks.withType(Test).configureEach { task ->
+            afterSuite { descriptor, result ->
+                if (descriptor.parent == null) {
+                    def evidence = [
+                        project: project.path, task: task.name,
+                        result: result.resultType.toString(),
+                        tests: result.testCount, successful: result.successfulTestCount,
+                        failed: result.failedTestCount, skipped: result.skippedTestCount,
+                        startedAtMillis: result.startTime, endedAtMillis: result.endTime
+                    ]
+                    def folder = new File(rootProject.projectDir, ".runtime/test-evidence")
+                    folder.mkdirs()
+                    new File(folder, project.name + "-" + task.name + ".json").text =
+                        JsonOutput.prettyPrint(JsonOutput.toJson(evidence))
+                    println("VT_TEST_EVIDENCE " + JsonOutput.toJson(evidence))
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_notice_accept">Devam etmek için bilgilendirmeyi okuyup kabul edin</string>
+    <string name="vv_ready_whisper">Offline Whisper modeli cihazda mevcut; yüklenmeden önce doğrulanır. Gerekirse Ayarlar’dan etkinleştirin. Mikrofon izni kayıt başlarken istenir. Yazılı giriş hazır.</string>
+    <string name="vv_ready_provider">Sistem ses sağlayıcısı mevcut; kurulu dil desteği garanti değildir. İzin kayıt başlarken istenir. Yazılı giriş hazır.</string>
+    <string name="vv_ready_typed">Yerel model veya sistem ses sağlayıcısı yok. Yazılı giriş kullanılabilir. Sahte indirme yapılmaz.</string>
+    <string name="vv_patient_languages">Konuşma dilleri</string>
+    <string name="vv_patient_summary">Girdi dilleri; arayüz, çeviri hedefi ve değerlendirme sonuç dili ayrı seçilir.</string>
+    <string name="vv_model_title">Çevrimdışı konuşma modeli</string>
+    <string name="vv_model_summary">Small modelinde Arapça doğruluk hataları görüldü; Medium daha fazla süre ve bellek gerektirir. İkisi de yereldir. Metni kontrol edin.</string>
+    <string name="vv_whisper_summary">Seçili model ve özgün kayıt kontrolleriyle yerel çok dilli tanıma. Ses cihazda kalır. İlk kullanım modeli hazırlar ve doğrular.</string>
+    <string name="vv_model_missing">Yerel model hazır değil. Ayarlar’daki Seçili Whisper modelini hazırla seçeneğini kullanın; yazılı giriş kullanılabilir.</string>
+    <string name="vv_translation_title">İsteğe bağlı yerel çeviri</string>
+    <string name="vv_translation_summary">Konuşma veya yazılı metnin isteğe bağlı yerel çevirisi. Bilinen anlam hataları vardır; varsayılan KAPALI. Değerlendirmeye yalnızca incelenmiş özgün metin gönderilir.</string>
+    <string name="vv_translation_target">Çeviri dili</string>
+    <string name="vv_translation_prepare">Çeviri modellerini hazırla</string>
+    <string name="vv_translation_models_summary">Seçilen ML Kit dil modelleri Wi-Fi üzerinden dil başına yaklaşık 30 MB. Bazı katalog dilleri NLLB gerektirir. Google metni değil SDK ölçümlerini alır.</string>
+    <string name="vv_developer">Geliştirici/Test ayarları</string>
+    <string name="vv_source_title">Kaynak kaydedici / VAD (deneysel)</string>
+    <string name="vv_source_summary">Hassasiyet, sessizlik ve ön tamponla 16 kHz kayıt. Offline Whisper kapalıyken tanıma sistem sağlayıcısını kullanır ve sesi çevrimiçi gönderebilir. Bu sağlayıcı emülatör testini geçmedi. Android 13+.</string>
+    <string name="vv_backend_summary">Sentetik senaryolar, backend adresi ve geçici erişim tokenı.</string>
+    <string name="vv_language_summary">arayüz dili</string>
+    <string name="vv_unavailable">Kullanılamıyor — </string>
+    <string name="vv_dependency_recorder">Yerel ses eşiği için Ayarlar’da Offline Whisper veya Kaynak kaydedici / VAD seçeneğini açın. Android SpeechRecognizer tek başına bu kontrolü sunmaz.</string>
+    <string name="vv_dependency_nllb">Özgün düşük kaliteli çeviri dili kataloğu NLLB gerektirir ve uygulanmamıştır. Whisper dört konuşma dilini bağımsız tanır; sahte çeviri kalitesi seçeneği sunulmaz.</string>
+    <string name="vv_dependency_tts">Okuma, kurulu en yüksek kaliteli çevrimdışı sesi kullanır. Özgün özel kalite kataloğu yoktur; sahte kalite seçeneği sunulmaz.</string>
+    <string name="vv_dependency_silence">Yerel sessizlik tespiti için Offline Whisper veya Kaynak kaydedici / VAD seçeneğini açın. Sistem sağlayıcısının zaman aşımı bununla eşdeğer değildir.</string>
+    <string name="vv_dependency_preroll">Yerel konuşma öncesi tampon Offline Whisper veya Kaynak kaydedici / VAD ile kullanılabilir. Android SpeechRecognizer tek başına bunu sunmaz.</string>
+</resources>

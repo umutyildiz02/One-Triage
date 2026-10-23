@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="VitalLegacy" parent="Theme.MaterialComponents.Light.DarkActionBar">  <!-- Theme.AppCompat.Light.DarkActionBar-->
+
+        <item name="colorPrimaryDark">@color/vv_primary_dark</item>
+        <item name="colorAccent">@color/vv_accent</item>
+        <item name="colorPrimary">@color/vv_primary</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <!--<item name="android:navigationBarColor">@color/vv_very_light_gray</item>-->
+        <!--<item name="android:navigationBarColor">@android:color/white</item>-->
+        <item name="cardViewStyle">@style/CardView</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+    </style>
+</resources>

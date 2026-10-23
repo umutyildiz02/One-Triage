@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_catalog_quality_summary">Élargit le catalogue original. La reconnaissance, les modèles de traduction et les voix installées sont vérifiés séparément. La qualité de traduction n’est pas garantie.</string>
+    <string name="vv_tts_quality_summary">Autorise les voix locales installées de qualité inférieure et les voix de compatibilité si aucune meilleure voix n’est disponible. Aucun téléchargement.</string>
+    <string name="vv_catalog_unsupported">Code de langue inconnu</string>
+</resources>

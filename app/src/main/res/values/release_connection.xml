@@ -1,0 +1,4 @@
+<resources>
+    <string name="vv_connection_settings">Connection settings</string>
+    <string name="vv_connection_settings_summary">HTTPS service address and your own access credential. No shared API key is stored in this app.</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_catalog_quality_summary">Özgün dil kataloğunu genişletir. Konuşma desteği, çeviri modeli hazırlığı ve kurulu okuma sesleri ayrı denetlenir. Çeviri kalitesi garantisi değildir.</string>
+    <string name="vv_tts_quality_summary">Daha iyi ses yoksa normal kalitenin altındaki kurulu çevrimdışı seslere ve eski uyumluluk seslerine izin verir. Ses indirmez.</string>
+    <string name="vv_catalog_unsupported">Tanınmayan dil kodu</string>
+</resources>

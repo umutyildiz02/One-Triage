@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_prepare_whisper">إعداد نموذج Whisper المحدد</string>
+    <string name="vv_prepare_whisper_summary">تنزيل HTTPS صريح مع التحقق من سلامة الملف. يُعاد استخدام النماذج الموجودة ويمكن استئناف التنزيل الجزئي.</string>
+    <string name="vv_translation_engine">محرك الترجمة</string>
+    <string name="vv_model_prepare">إعداد</string>
+    <string name="vv_model_pause">إيقاف الإعداد مؤقتًا</string>
+    <string name="vv_model_network_notice">تنزيل HTTPS صريح. تُستخدم النماذج المتحقق منها مجددًا. المغادرة توقف النقل مؤقتًا ويمكن استئنافه.</string>
+    <string name="vv_model_preparing">جارٍ تنزيل ملفات النماذج والتحقق منها…</string>
+    <string name="vv_model_ready">الملفات جاهزة ومتحقق منها. هذا لا يثبت الدقة السريرية.</string>
+    <string name="vv_model_paused">متوقف مؤقتًا. حُفظت الملفات الجزئية؛ اضغط إعداد للاستئناف.</string>
+    <string name="vv_model_error">الإعداد غير مكتمل. تحقق من الشبكة والتخزين ثم أعد المحاولة. حُفظت النماذج الموجودة.</string>
+    <string name="vv_nllb_title">ترجمة NLLB البحثية</string>
+    <string name="vv_nllb_summary">1.00 غيغابايت · اختياري · ترجمة محلية</string>
+    <string name="vv_nllb_notice">يستخدم NLLB نماذج بحثية بترخيص CC-BY-NC-4.0، غير معتمدة سريريًا ولا يقصد ناشرها الترجمة الطبية. احتفظ بالأصل؛ يُحلل النص الأصلي المراجع فقط. تنزيل النماذج نحو 1 غيغابايت.</string>
+    <string name="vv_translation_enable_whisper">فعّل Offline Whisper أولًا. تأتي الترجمة الاختيارية بعد التعرف على الكلام؛ يبقى النص المكتوب أصليًا.</string>
+    <string name="vv_model_error_network">الشبكة أو DNS غير متاح. حُفظت النماذج الموجودة. استعد اتصال الإنترنت ثم أعد المحاولة.</string>
+    <string name="vv_model_error_timeout">انتهت مهلة النقل. حُفظت البيانات الجزئية؛ أعد المحاولة للاستئناف.</string>
+    <string name="vv_model_error_tls">تعذر التحقق من الاتصال الآمن. تحقق من تاريخ الجهاز والشبكة ولا تعطل التحقق من الشهادة.</string>
+    <string name="vv_model_error_storage">المساحة الحرة غير كافية للنموذج والإعداد المؤقت. حُفظت النماذج الموجودة.</string>
+    <string name="vv_model_error_integrity">فشل التحقق من سلامة البيانات وتم رفضها. حُفظت النماذج الموجودة؛ يلزم بدء المحاولة مجددًا صراحةً.</string>
+    <string name="vv_model_error_server">رفض خادم النماذج النقل. لم يُثبت نموذج؛ أعد المحاولة بعد تغير الاتصال أو توفر الخادم.</string>
+</resources>

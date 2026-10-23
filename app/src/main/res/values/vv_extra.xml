@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_notice_accept">Read and accept the notice to continue</string>
+    <string name="vv_ready_whisper">Offline Whisper model is available locally and verified before loading. Enable it in Settings if needed. Microphone permission is requested when recording starts. Typed input is ready.</string>
+    <string name="vv_ready_provider">System speech provider is available; installed language support is not guaranteed. Permission is requested when recording starts. Typed input is ready.</string>
+    <string name="vv_ready_typed">No local model or system speech provider is available. Typed input remains ready. No fake download is performed.</string>
+    <string name="vv_patient_languages">Patient languages</string>
+    <string name="vv_patient_summary">Input languages; interface, translation target and assessment result languages are selected separately.</string>
+    <string name="vv_model_title">Offline speech model</string>
+    <string name="vv_model_summary">Small had Arabic accuracy errors; Medium needs more time and RAM. Both are local. Review the transcript.</string>
+    <string name="vv_whisper_summary">Local multilingual speech recognition with the selected model and original recorder controls. Audio stays on-device. First use prepares and verifies the model.</string>
+    <string name="vv_model_missing">Local model is not ready. Use Prepare selected Whisper model in Settings; typed input remains available.</string>
+    <string name="vv_translation_title">Optional local translation</string>
+    <string name="vv_translation_summary">Optional local translation of speech or written text. Known meaning errors; default OFF. Only the reviewed original is sent for assessment.</string>
+    <string name="vv_translation_target">Translation language</string>
+    <string name="vv_translation_prepare">Prepare translation models</string>
+    <string name="vv_translation_models_summary">Selected ML Kit language models: about 30 MB each over Wi-Fi. Some catalog languages require NLLB. Google receives SDK metrics, not input text or translation.</string>
+    <string name="vv_developer">Developer/Test settings</string>
+    <string name="vv_source_title">Source recorder / VAD (experimental)</string>
+    <string name="vv_source_summary">16 kHz capture with sensitivity, silence and pre-roll. With Offline Whisper disabled, recognition uses the system provider and may send audio online. That provider failed the emulator diagnostic. Android 13+.</string>
+    <string name="vv_backend_summary">Synthetic scenarios, backend address and temporary access token.</string>
+    <string name="vv_language_summary">interface language</string>
+    <string name="vv_unavailable">Not available — </string>
+    <string name="vv_dependency_recorder">Enable Offline Whisper or Source recorder / VAD in Settings to use the restored local volume threshold. Android SpeechRecognizer alone does not expose this control.</string>
+    <string name="vv_dependency_nllb">The original low-quality translation-language catalog requires NLLB and is not implemented. Bundled Whisper recognizes the four selected speech languages independently; no translation-quality toggle is simulated.</string>
+    <string name="vv_dependency_tts">Playback uses the highest-quality installed offline voice. The original custom quality catalog is not available; no quality toggle is simulated.</string>
+    <string name="vv_dependency_silence">Enable Offline Whisper or Source recorder / VAD in Settings to use local silence detection. The system-provider timeout alone is not equivalent.</string>
+    <string name="vv_dependency_preroll">The local pre-roll buffer is available with Offline Whisper or Source recorder / VAD enabled in Settings. Android SpeechRecognizer alone does not expose it.</string>
+</resources>

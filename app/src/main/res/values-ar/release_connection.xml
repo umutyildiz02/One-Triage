@@ -1,0 +1,4 @@
+<resources>
+    <string name="vv_connection_settings">إعدادات الاتصال</string>
+    <string name="vv_connection_settings_summary">عنوان خدمة HTTPS وبيانات الوصول الخاصة بك. لا يُخزّن مفتاح API مشترك في التطبيق.</string>
+</resources>

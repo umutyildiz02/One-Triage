@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_notice_accept">Lisez et acceptez la notice pour continuer</string>
+    <string name="vv_ready_whisper">Modèle Whisper disponible localement ; vérification avant chargement. Activez-le dans les paramètres si nécessaire. L’autorisation du microphone est demandée au début de l’enregistrement. Saisie écrite prête.</string>
+    <string name="vv_ready_provider">Fournisseur vocal système disponible ; les langues installées ne sont pas garanties. Autorisation demandée au début de l’enregistrement. Saisie écrite prête.</string>
+    <string name="vv_ready_typed">Aucun modèle local ni fournisseur vocal système disponible. La saisie écrite reste disponible. Aucun téléchargement simulé.</string>
+    <string name="vv_patient_languages">Langues de parole</string>
+    <string name="vv_patient_summary">Langues de saisie ; interface, traduction et résultat sont choisis séparément.</string>
+    <string name="vv_model_title">Modèle vocal hors ligne</string>
+    <string name="vv_model_summary">Small a présenté des erreurs en arabe ; Medium nécessite plus de temps et de mémoire. Les deux sont locaux. Relisez le texte.</string>
+    <string name="vv_whisper_summary">Reconnaissance multilingue locale avec le modèle choisi et les commandes d’enregistrement originales. Le son reste sur l’appareil. Première utilisation : préparation et vérification.</string>
+    <string name="vv_model_missing">Modèle local indisponible. Utilisez Préparer le modèle Whisper choisi dans les paramètres ; la saisie reste disponible.</string>
+    <string name="vv_translation_title">Traduction locale facultative</string>
+    <string name="vv_translation_summary">Traduction locale facultative de la parole ou du texte écrit. Erreurs de sens connues ; désactivée par défaut. Seul le texte original vérifié est envoyé pour évaluation.</string>
+    <string name="vv_translation_target">Langue de traduction</string>
+    <string name="vv_translation_prepare">Préparer les modèles de traduction</string>
+    <string name="vv_translation_models_summary">Modèles ML Kit sélectionnés : environ 30 Mo chacun par Wi-Fi. Certaines langues nécessitent NLLB. Google reçoit les métriques du SDK, pas les textes.</string>
+    <string name="vv_developer">Paramètres développeur/test</string>
+    <string name="vv_source_title">Enregistreur source / VAD (expérimental)</string>
+    <string name="vv_source_summary">Capture 16 kHz avec sensibilité, silence et pré-tampon. Sans Whisper hors ligne, la reconnaissance utilise le fournisseur système, pouvant envoyer le son en ligne. Ce fournisseur a échoué au test émulateur. Android 13+.</string>
+    <string name="vv_backend_summary">Scénarios fictifs, adresse backend et jeton d’accès temporaire.</string>
+    <string name="vv_language_summary">langue de l’interface</string>
+    <string name="vv_unavailable">Indisponible — </string>
+    <string name="vv_dependency_recorder">Activez Whisper hors ligne ou Enregistreur source / VAD pour utiliser le seuil sonore local. Android SpeechRecognizer seul ne fournit pas ce réglage.</string>
+    <string name="vv_dependency_nllb">Le catalogue original de langues de traduction de faible qualité nécessite NLLB et n’est pas implémenté. Whisper reconnaît les quatre langues indépendamment ; aucun réglage simulé.</string>
+    <string name="vv_dependency_tts">La lecture utilise la meilleure voix hors ligne installée. Le catalogue de qualité original est indisponible ; aucun réglage simulé.</string>
+    <string name="vv_dependency_silence">Activez Whisper hors ligne ou Enregistreur source / VAD pour détecter le silence localement. Le délai du fournisseur système n’est pas équivalent.</string>
+    <string name="vv_dependency_preroll">Le pré-tampon local est disponible avec Whisper hors ligne ou Enregistreur source / VAD. Android SpeechRecognizer seul ne le fournit pas.</string>
+</resources>

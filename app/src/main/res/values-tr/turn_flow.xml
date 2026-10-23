@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_read_translated_turns">Çevrilen konuşmaları seslendir</string>
+    <string name="vv_read_translated_turns_summary">Kullanıcının başlattığı mikrofon oturumunda başarılı çevirileri kurulu çevrimdışı sesle okur. Otomatik kayıt okuma bitince sürer; Durdur veya Geri oturumu bitirir. Bilinen çeviri hataları devam eder.</string>
+</resources>

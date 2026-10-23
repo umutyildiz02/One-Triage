@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_prepare_whisper">Préparer le modèle Whisper choisi</string>
+    <string name="vv_prepare_whisper_summary">Téléchargement HTTPS explicite avec vérification. Les modèles existants sont réutilisés ; reprise des téléchargements partiels.</string>
+    <string name="vv_translation_engine">Moteur de traduction</string>
+    <string name="vv_model_prepare">Préparer</string>
+    <string name="vv_model_pause">Suspendre la préparation</string>
+    <string name="vv_model_network_notice">Téléchargement HTTPS explicite. Modèles vérifiés réutilisés. Quitter suspend le transfert ; reprise possible.</string>
+    <string name="vv_model_preparing">Téléchargement et vérification des modèles…</string>
+    <string name="vv_model_ready">Fichiers vérifiés et prêts. Cela ne prouve pas une précision clinique.</string>
+    <string name="vv_model_paused">En pause. Fichiers partiels conservés ; touchez Préparer pour reprendre.</string>
+    <string name="vv_model_error">Préparation incomplète. Vérifiez réseau et stockage, puis réessayez. Modèles existants préservés.</string>
+    <string name="vv_nllb_title">Traduction NLLB de recherche</string>
+    <string name="vv_nllb_summary">1,00 Go · facultatif · traduction locale</string>
+    <string name="vv_nllb_notice">NLLB utilise des modèles de recherche CC-BY-NC-4.0. Non validés cliniquement et non destinés par leur éditeur à la traduction médicale. Conservez l’original ; seul l’original relu est analysé. Environ 1 Go à télécharger.</string>
+    <string name="vv_translation_enable_whisper">Activez Offline Whisper. La traduction facultative suit la reconnaissance ; le texte saisi reste original.</string>
+    <string name="vv_model_error_network">Réseau ou DNS indisponible. Modèles existants préservés. Rétablissez Internet puis réessayez.</string>
+    <string name="vv_model_error_timeout">Le transfert a expiré. Les octets partiels sont conservés ; réessayez pour reprendre.</string>
+    <string name="vv_model_error_tls">Connexion sécurisée non vérifiable. Vérifiez la date et le réseau ; ne désactivez pas la validation du certificat.</string>
+    <string name="vv_model_error_storage">Stockage libre insuffisant pour le modèle et la préparation temporaire. Modèles existants préservés.</string>
+    <string name="vv_model_error_integrity">Les octets téléchargés ont échoué à la vérification et ont été rejetés. Modèles existants préservés ; relancez explicitement.</string>
+    <string name="vv_model_error_server">Le serveur de modèles a refusé le transfert. Aucun modèle installé ; réessayez après un changement de connectivité ou de disponibilité.</string>
+</resources>

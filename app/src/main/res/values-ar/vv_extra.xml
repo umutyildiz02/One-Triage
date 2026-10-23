@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vv_notice_accept">اقرأ الإشعار ووافق عليه للمتابعة</string>
+    <string name="vv_ready_whisper">نموذج Whisper متاح محليًا ويُتحقق منه قبل التحميل. فعّله في الإعدادات عند الحاجة. يُطلب إذن الميكروفون عند بدء التسجيل. الكتابة جاهزة.</string>
+    <string name="vv_ready_provider">خدمة التعرف النظامية متاحة؛ دعم اللغات المثبتة غير مضمون. يُطلب الإذن عند بدء التسجيل. الكتابة جاهزة.</string>
+    <string name="vv_ready_typed">لا يتوفر نموذج محلي أو خدمة تعرف نظامية. تظل الكتابة متاحة. لا يوجد تنزيل وهمي.</string>
+    <string name="vv_patient_languages">لغات الكلام</string>
+    <string name="vv_patient_summary">لغات الإدخال؛ تُختار لغة الواجهة وهدف الترجمة ونتيجة التقييم بشكل مستقل.</string>
+    <string name="vv_model_title">نموذج الكلام دون اتصال</string>
+    <string name="vv_model_summary">ظهرت أخطاء دقة في العربية مع Small؛ يحتاج Medium وقتاً وذاكرة أكثر. كلاهما محلي. راجع النص.</string>
+    <string name="vv_whisper_summary">تعرف محلي متعدد اللغات بالنموذج المختار وعناصر التسجيل الأصلية. يبقى الصوت على الجهاز. يُجهز النموذج ويُتحقق منه عند أول استخدام.</string>
+    <string name="vv_model_missing">النموذج المحلي غير جاهز. استخدم إعداد نموذج Whisper المحدد في الإعدادات؛ تظل الكتابة متاحة.</string>
+    <string name="vv_translation_title">ترجمة محلية اختيارية</string>
+    <string name="vv_translation_summary">ترجمة محلية اختيارية للكلام أو النص المكتوب. توجد أخطاء معنوية معروفة؛ معطلة افتراضيًا. يُرسل النص الأصلي الذي تمت مراجعته فقط للتقييم.</string>
+    <string name="vv_translation_target">لغة الترجمة</string>
+    <string name="vv_translation_prepare">إعداد نماذج الترجمة</string>
+    <string name="vv_translation_models_summary">نماذج ML Kit المختارة: نحو 30 ميغابايت لكل لغة عبر Wi-Fi. بعض اللغات تتطلب NLLB. تتلقى Google مقاييس SDK وليس النصوص.</string>
+    <string name="vv_developer">إعدادات المطور والاختبار</string>
+    <string name="vv_source_title">مسجل المصدر / VAD (تجريبي)</string>
+    <string name="vv_source_summary">تسجيل 16 كيلوهرتز مع الحساسية والصمت والتخزين المسبق. عند تعطيل Whisper يُستخدم مزود النظام وقد يرسل الصوت عبر الإنترنت. فشل هذا المزود في اختبار المحاكي. Android 13+.</string>
+    <string name="vv_backend_summary">سيناريوهات اصطناعية وعنوان الخادم ورمز وصول مؤقت.</string>
+    <string name="vv_language_summary">لغة الواجهة</string>
+    <string name="vv_unavailable">غير متاح — </string>
+    <string name="vv_dependency_recorder">فعّل Whisper دون اتصال أو مسجل المصدر / VAD لاستخدام عتبة الصوت المحلية. لا يوفر Android SpeechRecognizer وحده هذا التحكم.</string>
+    <string name="vv_dependency_nllb">يتطلب كتالوج الترجمة الأصلي منخفض الجودة NLLB وهو غير منفذ. يتعرف Whisper على اللغات الأربع بشكل مستقل؛ لا يوجد إعداد جودة وهمي.</string>
+    <string name="vv_dependency_tts">تستخدم القراءة أفضل صوت مثبت دون اتصال. كتالوج الجودة الأصلي غير متاح؛ لا يوجد إعداد جودة وهمي.</string>
+    <string name="vv_dependency_silence">فعّل Whisper دون اتصال أو مسجل المصدر / VAD لاكتشاف الصمت محلياً. مهلة مزود النظام ليست مكافئة.</string>
+    <string name="vv_dependency_preroll">التخزين المسبق المحلي متاح مع Whisper دون اتصال أو مسجل المصدر / VAD. لا يوفره Android SpeechRecognizer وحده.</string>
+</resources>
