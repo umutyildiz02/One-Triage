@@ -123,8 +123,6 @@ Local capture does not intentionally save recordings; conversation text and resu
 
 A personal APK containing an API key is extractable and must stay private. Never commit credentials, signing files, patient data, recordings, or private APKs. See [Privacy and safety](app/src/commonAssets/PRIVACY_AND_SAFETY.txt).
 
-The urgency categories and experimental score are not a validated clinical protocol. Source availability does not establish regulatory approval. [LICENSE.md](LICENSE.md) describes the mixed license scope; [NOTICE.md](NOTICE.md) preserves attribution. No blanket open-source license is granted for all original code or branding.
-
 ## Project structure and contributions
 
 | Directory | Contents |
